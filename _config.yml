@@ -34,8 +34,8 @@ highlighter-theme: monokai
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
-category_dir: category/
-tag_dir: tag/
+# category_dir: category/
+# tag_dir: tag/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
