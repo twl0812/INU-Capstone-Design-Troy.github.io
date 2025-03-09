@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hi We are Troy"
+title:  "Hello We are Troy :)"
 date:   2025-02-10 01:31:29 +0900
 ---
 
