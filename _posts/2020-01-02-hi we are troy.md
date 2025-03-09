@@ -3,26 +3,46 @@ layout: post
 title:  "Hi We are Troy"
 date:   2025-03-09 01:31:29 +0900
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+### 팀 소개
 
-`YEAR-MONTH-DAY-title.MARKUP`
+**팀장**
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+- 이름: 장경은
+- 나이: 22 (2003)
+- 전화번호: 010-2650-6346
+- 포트폴리오
+    - **LLM(GPT, Llama, sLLM)**
+    - Linux - Web 연계(PHP + Nginx)
+    - 크로스 플랫폼 앱 개발 경험(Flutter)
+    - 프론트엔드 (Http, CSS, JavaScript) 기초 경험
+    - Node.js + 서버 통신
+    - MySQL DB
+    - Firebase + 앱인벤터 연동
+    - Arduino
+    - Raspberry Pi + Linux
 
-xxxxxxxxxx print 'hello world'ruby
+**팀원**
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+- 이름: 이태우
+- 나이 27(1998)
+- 전화번호:010-6609-0643
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+**팀원**
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+- 이름: 손승민
+- 나이: 25 (2001)
+- 전화번호: 010-5560-8251
+- 포트폴리오
+    - **프론트엔드**
+    - sLLM 이용 경험
+
+**팀원**
+
+- 이름: 최연호
+- 나이: 27 (1999)
+- 전화번호: 010-4449-3126
+- 포트폴리오
+    - **서버(백엔드)**
+    - 데이터베이스
+    - 클라우드
