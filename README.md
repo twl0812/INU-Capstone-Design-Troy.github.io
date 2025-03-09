@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-### 팀 소개
-
 **팀장**
 
 - 이름: 장경은
