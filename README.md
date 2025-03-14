@@ -3,6 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
+page link
+https://inu-capstone-design-troy.github.io/2025/03/09/%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8%EB%AF%B8%ED%8C%85.html
+
+
+**Member**
 
 **팀장** 🔫😎💵
 
