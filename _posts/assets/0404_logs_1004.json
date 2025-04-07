@@ -1,0 +1,1598 @@
+[
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n; int address = 0x1000; scanf(\"%d\", &n); address += 4 * n; printf(\"%X\", address); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. 변수 address를 0x1000으로 초기화하세요.\n4. n에 대한 입력을 받으세요.\n5. address에 n의 4배를 더하세요.\n6. 주소 값을 16진수 형식으로 출력하세요.\n7. return 0;으로 프로그램을 종료하세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int i; int address = 0x1000; scanf(\"%d\", &i); for (int j = 0; j < i; j++) { address = address + 4; } printf(\"%X\", address); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. 주소값을 저장할 int형 변수 address를 0x1000으로 초기화하세요.\n4. i에 대한 입력을 받으세요.\n5. [rep_start(1)] j를 선언해 0부터 i-1까지 반복하는 for 루프를 작성하세요.\n6. address에 4를 더하여 새 주소값을 설정하세요.\n7. [rep_end(1)]\n8. address의 값을 16진수 형식으로 출력하세요.\n9. return 0;으로 프로그램을 종료하세요.\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main(){ int i; scanf(\"%d\",&i); printf(\"%X\",(0x1000+i*4)); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. i에 대한 입력을 받으세요.\n4. (0x1000 + i * 4)의 결과를 16진수 형태로 출력하세요.\n5. return 0;으로 프로그램을 종료하세요.\n6. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void) { int I; scanf(\"%d\", &I); unsigned int arr[100]; for (int i = 0; i < 100; i++) { arr[i] = 0x1000 + 0x4*i; } printf(\"%X\", arr[I]); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 I를 선언하세요.\n3. I에 대해 입력을 받으세요.\n4. unsigned int형 배열 arr를 100개의 요소로 선언하세요.\n5. [rep_start(1)] i를 선언해 0부터 99까지 반복하는 for 루프를 작성하세요.\n6. arr의 i번째 요소를 0x1000과 0x4*i의 합으로 초기화하세요.\n7. [rep_end(1)]\n8. arr[I]의 값을 16진수 형식으로 출력하세요.\n9. return 0;으로 프로그램을 종료하세요.\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int i; scanf(\"%d\", &i); i = 4 * (i); printf(\"%X\", 0x1000 + i); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. i에 대한 입력을 받으세요.\n4. i를 4배로 곱하세요.\n5. 0x1000에 i를 더하여 결과를 16진수로 출력하세요.\n6. return 0;으로 프로그램을 종료하세요.\n7. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int I; scanf(\"%d\", &I); printf(\"%X\", 4096 + 4 * I); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 I를 선언하세요.  \n3. I에 대한 입력을 받으세요.  \n4. 4096에 4 곱하기 I를 더한 결과를 16진수 형식으로 출력하세요.  \n5. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int arr[100]; int i; scanf(\"%d\", &i); for (int j = 0; j < 100; j++) { arr[j] = 0X1000 + (0x04)*j; } for (int j = 0; j < 100; j++) { if (i == j) { printf(\"%X\", arr[i]); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 배열 arr을 크기 100으로 선언하세요.\n3. 정수형 변수 i를 선언하세요.\n4. i에 대한 입력을 받으세요.\n5. [rep_start(1)] j를 선언해 0부터 99까지 반복하는 for 루프를 작성하세요.\n6. arr[j]에 0x1000과 0x04에 j를 곱한 값을 더하여 초기화하세요.\n7. [rep_end(1)]\n8. [rep_start(1)] j를 선언해 0부터 99까지 반복하는 for 루프를 작성하세요.\n9. [cond_start(2)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n10. i가 j와 같다면 arr[i]를 16진수 형식으로 출력하세요.\n11. [cond_end(2)]\n12. [rep_end(1)]\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int n[101]; int k; scanf(\"%d\", &k); n[0] = 0x1000; int prev = 0x1000; for (int i = 1; i < 101; i++) { n[i] = prev + 4; prev = n[i]; } printf(\"%X\", n[k]); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 배열 n을 선언하고, 크기를 101로 지정하세요.\n3. 정수형 변수 k를 선언하세요.\n4. k에 대한 입력을 받으세요.\n5. n[0]에 0x1000 값을 할당하세요.\n6. int형 변수 prev를 선언하고 0x1000 값을 할당하세요.\n7. [rep_start(1)] i를 선언해 1부터 100까지 반복하는 for 루프를 작성하세요.\n8. n[i]에 prev + 4의 값을 할당하세요.\n9. prev에 n[i]의 값을 할당하세요.\n10. [rep_end(1)]\n11. n[k]의 값을 16진수로 출력하세요.\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n; int address = 0x1000; int val = 0; scanf(\"%x\", &n); val = n - address; printf(\"%d\", val / 4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. 정수형 변수 address를 0x1000으로 초기화하세요.\n4. 정수형 변수 val을 0으로 초기화하세요.\n5. 16진수 형식으로 n에 값을 입력받으세요.\n6. val에 n에서 address를 빼는 연산 결과를 저장하세요.\n7. val을 4로 나눈 값을 출력하세요.\n8. return 0;으로 프로그램을 종료하세요.\n9. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int A[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &A[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i + j == 8 || i == j || i == 4 || j == 4)printf(\" \"); else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] 정수형 반환이 없는 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int형 2차원 배열 A를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf를 사용해 배열 A의 각 요소에 입력을 받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] 배열의 인덱스 i와 j의 합이 8인지, i가 j와 같은지, i가 4인지, j가 4인지 확인하는 조건문을 작성하세요.\n11. 조건이 참이라면 공백을 출력하세요.\n12. 그렇지 않으면 배열 A의 요소를 출력하세요.\n13. [cond_end(3)]\n14. printf를 사용해 줄 바꿈을 추가하세요.\n15. [rep_end(2)]\n16. [rep_end(1)]\n17. return 0;으로 프로그램을 종료하세요.\n18. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int N; unsigned int arr[100]; unsigned int T; scanf(\"%d\", &N); for (int i = 0; i < N; i++) { scanf(\"%u\", &arr[i]); } scanf(\"%u\", &T); for (int j = 0; j < N; j++) { if (arr[j] <= T) arr[j] = 0; printf(\"%u \", arr[j]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. unsigned int형 배열 arr[100]을 선언하세요.\n4. unsigned int형 변수 T를 선언하세요.\n5. N에 대한 입력을 받으세요.\n6. [rep_start(1)] i를 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n7. arr 배열의 i번째 요소에 대한 입력을 받으세요.\n8. [rep_end(1)]\n9. T에 대한 입력을 받으세요.\n10. [rep_start(1)] j를 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] arr[j]가 T보다 작거나 같은지 확인하는 조건문을 작성하세요.\n12. arr[j]가 T보다 작거나 같다면 arr[j]를 0으로 설정하세요.\n13. [cond_end(2)]\n14. arr[j]의 값을 출력하세요.\n15. [rep_end(1)]\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main(){ int A; scanf(\"%x\",&A); A = A-(0x1000); A = A/4; printf(\"%d\",A); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 A를 선언하세요.  \n3. 16진수 형식으로 A에 입력을 받으세요.  \n4. A에서 0x1000을 감소시킵니다.  \n5. A를 4로 나누어 새로운 값을 A에 저장합니다.  \n6. A의 값을 10진수 형식으로 출력하세요.  \n7. return 0;으로 프로그램을 종료하세요.  \n8. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int i; scanf(\"%d\", &i); int k = 0x1000; printf(\"%X\", k + 4 * i); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 i를 선언하세요.  \n3. i에 정수를 입력 받으세요.  \n4. 정수형 변수 k를 0x1000으로 초기화하세요.  \n5. k와 4*i의 합을 16진수 형식으로 출력하세요.  \n6. return 0;으로 프로그램을 종료하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int a[8] = { 0 }; unsigned int b = 0; scanf(\"%u\", &b); for (int i = 0; i < 8; i++) { a[i] = b % 2; b = b / 2; } for (int i = 0; i < 8; i++) { printf(\"%d\", a[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 배열 a를 8개의 0으로 초기화하여 선언하세요.\n3. unsigned int형 변수 b를 선언하고 초기값을 0으로 설정하세요.\n4. b의 값을 입력 받으세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. a 배열의 i번째 요소에 b를 2로 나누었을 때의 나머지 값을 저장하세요.\n7. b를 2로 나누어 업데이트하세요.\n8. [rep_end(1)]\n9. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n10. a 배열의 i번째 요소를 출력하세요.\n11. [rep_end(1)]\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int I; scanf(\"%u\", &I); printf(\"%0X\", 0x1000 + I * 4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2.unsigned int형 변수 I를 선언하세요.\n3. I에 입력을 받으세요.\n4. 입력받은 I에 4를 곱한 값에 0x1000을 더한 후, 16진수 형식으로 출력하세요.\n5. return 0;으로 프로그램을 종료하세요.\n6. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> #define UINT unsigned int int main() { int n, m; int address = 0x1000; scanf(\"%d %d\", &n, &m); address += (n * 5) * 4 + m * 4; printf(\"%X\", address); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 n과 m을 선언하세요.  \n3. 주소를 저장할 변수 address를 0x1000으로 초기화하세요.  \n4. n과 m의 값을 입력 받으세요.  \n5. address에 (n * 5) * 4 + m * 4를 더하여 업데이트하세요.  \n6. address의 값을 16진수 형식으로 출력하세요.  \n7. return 0;으로 프로그램을 종료하세요.  \n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int x; unsigned int a[8]; scanf(\"%d\", &x); for (int i = 0; i < 8; i++) { a[i] = x % 2; x = x / 2; } for (int i = 0; i < 8; i++) { printf(\"%d\", a[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] 반환형 int인 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 x를 선언하세요.\n3. unsigned int형 배열 a[8]를 선언하여 8개의 정수를 저장할 수 있도록 설정하세요.\n4. x에 정수를 입력 받기 위해 scanf 함수를 호출하세요.\n5. [rep_start(1)] i를 선언하고 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. a[i]에 x를 2로 나눈 나머지를 저장하여 이진수의 각 비트를 저장하세요.\n7. x를 2로 나눈 몫으로 업데이트하여 다음 비트를 준비하세요.\n8. [rep_end(1)]\n9. [rep_start(1)] i를 선언하고 0부터 7까지 반복하는 for 루프를 작성하세요.\n10. 배열 a의 각 요소를 출력하세요.\n11. [rep_end(1)]\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int i; scanf(\"%x\", &i); int k = 0x1000; printf(\"%d\", (i - k) / 4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 i를 선언하세요.  \n3. 16진수 형식으로 i에 입력을 받으세요.  \n4. int형 변수 k를 0x1000으로 초기화하세요.  \n5. (i - k)를 4로 나눈 값을 출력하세요.  \n6. [func_def_end(1)]  \n7. return 0;으로 프로그램을 종료하세요.  \n"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int a = 0; scanf(\"%d\", &a); for (int i = 0; i < 8; i++) { printf(\"%d\", (a >> i)&1); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. int형 변수 a를 0으로 초기화하세요.  \n3. M 변수를 위한 입력을 받으세요.  \n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.  \n5. a를 i 비트만큼 오른쪽으로 이동시킨 후 가장 오른쪽 비트를 추출하여 출력하세요.  \n6. [rep_end(1)]  \n7. return 0;으로 프로그램을 종료하세요.  \n8. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int i = 0; scanf(\"%d\", &i); printf(\"%X\", i * 4 + 0x1000); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 i를 0으로 초기화하세요.  \n3. i에 대한 입력을 받으세요.  \n4. 입력받은 i의 값을 4배한 후 0x1000을 더한 결과를 16진수 형식으로 출력하세요.  \n5. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void){ int i; int arr[100] = { }; scanf(\"%d\", &i); printf(\"%X\", 0x1000+i*4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. 크기가 100인 정수형 배열 arr을 선언하지만 초기화는 하지 않으세요.\n4. i에 대한 입력을 받으세요.\n5. 0x1000와 i를 4배한 값을 더한 결과를 16진수 형식으로 출력하세요.\n6. 프로그램을 종료하기 위해 return 0;을 사용하세요.\n7. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void) { unsigned int A; scanf(\"%X\", &A); unsigned int arr[100]; for (int i = 0; i < 100; i++) { arr[i] = i; } printf(\"%d\", arr[(A - 0x1000)/4]); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned int형 변수 A를 선언하세요.  \n3. 16진수 형식으로 A에 입력을 받으세요.  \n4. unsigned int형 배열 arr을 크기 100으로 선언하세요.  \n5. [rep_start(1)] i를 선언하여 0부터 99까지 반복하는 for 루프를 작성하세요.  \n6. 배열 arr의 각 인덱스에 해당하는 값을 i로 초기화하세요.  \n7. [rep_end(1)]  \n8. (A - 0x1000)을 4로 나눈 값으로 arr의 인덱스를 지정하여 해당 값을 출력하세요.  \n9. return 0;으로 프로그램을 종료하세요.  \n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int A; scanf(\"%X\", &A); printf(\"%d\", (A - 4096) / 4); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 A를 선언하세요.  \n3. A에 16진수 입력을 받기 위해 scanf 함수를 호출하세요.  \n4. A에서 4096을 빼고 4로 나눈 값을 출력하기 위해 printf 함수를 호출하세요.  \n5. [func_def_end(1)]  \n6. return 0;으로 프로그램을 종료하세요.  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { unsigned int a = 0; scanf(\"%u\", &a); for (int i = 0; i < 8; i++) { if (a == 0) { printf(\"0\"); } else if (a > 0) { printf(\"%u\", a % 2); a = a / 2; } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] unsigned int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 a를 0으로 초기화하세요.\n3. a에 대한 입력을 받으세요.\n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. [cond_start(2)] a가 0인지 확인하는 조건문을 작성하세요.\n6. a가 0이라면 \"0\"을 출력하세요.\n7. [cond_end(2)]\n8. [cond_start(2)] a가 0보다 큰지 확인하는 조건문을 작성하세요.\n9. a가 0보다 크다면 a를 2로 나눈 나머지를 출력하세요.\n10. a를 2로 나누어 값을 업데이트하세요.\n11. [cond_end(2)]\n12. [rep_end(1)]\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int a[9][9] = { 0 }; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &a[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i + j == 8) { printf(\" \"); } else if (i == 4) { printf(\" \"); } else if (j == 4) { printf(\" \"); } else if (i == j) { printf(\" \"); } else { printf(\"%u\", a[i][j]); } printf(\" \"); } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 9x9 배열 a를 0으로 초기화하여 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. 배열 a의 각 요소에 대해 사용자로부터 unsigned int 값을 입력받아 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(1)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n11. i와 j의 합이 8이라면 공백을 출력하세요.\n12. [cond_end(1)]\n13. [cond_start(1)] i가 4인지 확인하는 조건문을 작성하세요.\n14. i가 4라면 공백을 출력하세요.\n15. [cond_end(1)]\n16. [cond_start(1)] j가 4인지 확인하는 조건문을 작성하세요.\n17. j가 4라면 공백을 출력하세요.\n18. [cond_end(1)]\n19. [cond_start(1)] i와 j가 같다면 (대각선 위치) 공백을 출력하는 조건문을 작성하세요.\n20. i와 j가 같다면 공백을 출력하세요.\n21. [cond_end(1)]\n22. [cond_start(1)] 위의 조건들이 모두 해당되지 않는 경우에 배열 a의 요소를 출력하는 조건문을 작성하세요.\n23. 배열 a의 i, j번째 요소를 출력하세요.\n24. [cond_end(1)]\n25. 공백을 출력하세요.\n26. [rep_end(2)]\n27. 줄바꿈을 출력하세요.\n28. [rep_end(1)]\n29. return 0;으로 프로그램을 종료하세요.\n30. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int i, j; scanf(\"%d %d\", &i, &j); int k = 0x1000; printf(\"%X\", (i * 20 + j * 4) + k); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 i와 j를 선언하세요.  \n3. i와 j에 입력을 받으세요.  \n4. int형 변수 k를 0x1000으로 초기화하세요.  \n5. (i * 20 + j * 4)와 k의 합을 16진수 형식으로 출력하세요.  \n6. return 0;으로 프로그램을 종료하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int N; scanf(\"%d\", &N); int array[8] = { 0 }; for (int i = 0; i < 8; i++) { array[i] = N%2; N/=2; } for (int i = 0; i <8; i++) { printf(\"%d\", array[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 N을 선언하세요.  \n3. N에 입력을 받으세요.  \n4. 정수형 배열 array를 크기 8로 선언하고 0으로 초기화하세요.  \n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.  \n6. array[i]에 N을 2로 나눈 나머지를 저장하세요.  \n7. N을 2로 나눈 값으로 업데이트하세요.  \n8. [rep_end(1)]  \n9. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.  \n10. array[i]의 값을 출력하세요.  \n11. [rep_end(1)]  \n12. return 0;으로 프로그램을 종료하세요.  \n13. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> #define UINT unsigned int int main() { int n, m; int address = 0x1000; int val = 0; int A, B; scanf(\"%x\", &n); val = (n - address) / 4; A = val / 5; B = val % 5; printf(\"%d %d\", A, B); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n과 m을 선언하세요.\n3. 정수형 변수 address를 0x1000으로 초기화하세요.\n4. 정수형 변수 val을 0으로 초기화하세요.\n5. 정수형 변수 A와 B를 선언하세요.\n6. 16진수 형식으로 n에 입력을 받으세요.\n7. val에 n과 address의 차이를 4로 나눈 값을 저장하세요.\n8. A에 val을 5로 나눈 몫을 저장하세요.\n9. B에 val을 5로 나눈 나머지를 저장하세요.\n10. A와 B의 값을 출력하세요.\n11. return 0;으로 프로그램을 종료하세요.\n12. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int arr[9][9] = { 0 }; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &arr[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == 4 || j == 4 || i == j || i + j == 8) { printf(\" \"); } else { printf(\"%u \", arr[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int형 2차원 배열 arr을 선언하고 모두 0으로 초기화하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. arr[i][j]에 사용자로부터 입력받은 unsigned int 값을 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] 현재 위치(i, j)가 특정 조건을 충족하는지 확인하는 조건문을 작성하세요.\n11. (i가 4이거나 j가 4이거나 i와 j가 같거나 i + j가 8이면) 조건이 충족된다면 공백을 출력하세요.\n12. [cond_end(2)]\n13. 그렇지 않다면 arr[i][j]의 값을 출력하세요.\n14. [rep_end(2)]\n15. 각 행의 출력을 마친 후 개행 문자('\\n')를 출력하세요.\n16. [rep_end(1)]\n17. return 0;으로 프로그램을 종료하세요.\n18. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void) { int n = 0; int dec[8] = { 0 }; int i = 0; scanf(\"%d\", &n); while (n > 0) { dec[i] = n % 2; n = n / 2; i++; } for (int j = 0; j < 8; j++) { printf(\"%d\", dec[j]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 0으로 초기화하세요.\n3. 크기가 8인 int형 배열 dec를 선언하고, 모든 요소를 0으로 초기화하세요.\n4. 정수형 변수 i를 0으로 초기화하세요.\n5. n에 대한 입력을 받으세요.\n6. [rep_start(1)] n이 0보다 큰 동안 반복하는 while 루프를 작성하세요.\n7. dec 배열의 i번째 요소에 n을 2로 나눈 나머지를 저장하세요.\n8. n을 2로 나눈 몫으로 업데이트하세요.\n9. i의 값을 1 증가시키세요.\n10. [rep_end(1)]\n11. [rep_start(1)] j를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n12. dec 배열의 j번째 요소를 출력하세요.\n13. [rep_end(1)]\n14. return 0;으로 프로그램을 종료하세요.\n15. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include<stdio.h> int main() { int A; int B; scanf(\"%d %d\", &A, &B); printf(\"%X\", 0x1000 + A * 20 + B * 4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. int형 변수 A를 선언하세요.\n3. int형 변수 B를 선언하세요.\n4. A와 B에 입력을 받으세요.\n5. 0x1000, A * 20, B * 4를 더한 값을 16진수 형식으로 출력하세요.\n6. return 0;으로 프로그램을 종료하세요.\n7. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int a = 0; scanf(\"%d\", &a); int b = 0; printf(\"%d\", 1 & a); for (int i = 0; i < 7; i++) { a = a >> 1; printf(\"%d\", 1&a); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 a를 0으로 초기화하세요.\n3. a에 사용자로부터 정수를 입력받으세요.\n4. 정수형 변수 b를 0으로 초기화하세요.\n5. a의 가장 오른쪽 비트와 1을 비트 AND 연산하여 출력하세요.\n6. [rep_start(1)] i를 0부터 6까지 반복하는 for 루프를 작성하세요.\n7. a를 오른쪽으로 1비트 시프트하여 a의 값을 변경하세요.\n8. a의 가장 오른쪽 비트와 1을 비트 AND 연산하여 출력하세요.\n9. [rep_end(1)]\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int A, B; int address = 0x1000; scanf(\"%d %d\", &A, &B); for (int j = 0; j < A; j++) { address = address + 20; } for (int j = 0; j < B; j++) { address = address + 4; } printf(\"%X\", address); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 A와 B를 선언하세요.  \n3. 주소를 저장할 int형 변수 address를 0x1000으로 초기화하세요.  \n4. A와 B에 입력을 받으세요.  \n5. [rep_start(1)] j를 선언해 A만큼 반복하는 for 루프를 작성하세요.  \n6. address에 20을 더하여 주소를 업데이트하세요.  \n7. [rep_end(1)]  \n8. [rep_start(1)] j를 선언해 B만큼 반복하는 for 루프를 작성하세요.  \n9. address에 4를 더하여 주소를 업데이트하세요.  \n10. [rep_end(1)]  \n11. address의 값을 16진수 형식으로 출력하세요.  \n12. return 0;으로 프로그램을 종료하세요.  \n13. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int A[9][9]; unsigned int i, j; for (i = 0; i < 9; i++) { for (j = 0; j < 9; j++) { scanf(\"%u\", &A[i][j]); } } for (i = 0; i< 4; i++) { for (j = 0; j < 9; j++) { if (i - j == 0||i+j==8||j==4) printf(\" \"); else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } printf(\"\\n\"); for (i = 5; i < 9; i++) { for (j = 0; j < 9; j++) { if (i - j == 0||i+j==8||j==4) printf(\" \"); else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] unsigned int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int 형 배열 A를 선언하세요.\n3. unsigned int 타입의 변수 i와 j를 선언하세요.\n4. [rep_start(1)] i를 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. [rep_start(2)] j를 0부터 8까지 반복하는 for 루프를 작성하세요.\n6. 배열 A의 i,j 위치에 입력을 받으세요.\n7. [rep_end(2)]\n8. [rep_end(1)]\n9. [rep_start(1)] i를 0부터 3까지 반복하는 for 루프를 작성하세요.\n10. [rep_start(2)] j를 0부터 8까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] i와 j의 차이가 0이거나, i와 j의 합이 8이거나, j가 4인지를 확인하는 조건문을 작성하세요.\n12. 해당 조건이 만족하면 공백을 출력하세요.\n13. 그렇지 않다면 배열 A의 i,j 값을 출력하세요.\n14. [cond_end(2)]\n15. printf를 이용해 줄 바꿈을 출력하세요.\n16. [rep_end(2)]\n17. printf를 이용해 줄 바꿈을 출력하세요.\n18. [rep_start(1)] i를 5부터 8까지 반복하는 for 루프를 작성하세요.\n19. [rep_start(2)] j를 0부터 8까지 반복하는 for 루프를 작성하세요.\n20. [cond_start(2)] i와 j의 차이가 0이거나, i와 j의 합이 8이거나, j가 4인지를 확인하는 조건문을 작성하세요.\n21. 해당 조건이 만족하면 공백을 출력하세요.\n22. 그렇지 않다면 배열 A의 i,j 값을 출력하세요.\n23. [cond_end(2)]\n24. printf를 이용해 줄 바꿈을 출력하세요.\n25. [rep_end(2)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int hr[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &hr[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) { printf(\" \"); } else if (i + j == 8) { printf(\" \"); } else if (j == 4) { printf(\" \"); } else if (i == 4) { printf(\" \"); } else { printf(\"%u \", hr[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 이차원 배열 hr을 선언하여 9x9 크기로 만드세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. 배열 hr의 각 요소에 대해 사용자로부터 unsigned int 값을 입력 받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] i와 j가 같다면 조건문을 작성하세요.\n11. 조건이 참이라면 공백을 출력하세요.\n12. [cond_end(3)]\n13. [cond_start(3)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n14. 조건이 참이라면 공백을 출력하세요.\n15. [cond_end(3)]\n16. [cond_start(3)] j가 4인지 확인하는 조건문을 작성하세요.\n17. 조건이 참이라면 공백을 출력하세요.\n18. [cond_end(3)]\n19. [cond_start(3)] i가 4인지 확인하는 조건문을 작성하세요.\n20. 조건이 참이라면 공백을 출력하세요.\n21. [cond_end(3)]\n22. 그렇지 않다면 hr[i][j]를 출력하세요.\n23. [rep_end(2)]\n24. 각 행의 끝에서 줄 바꿈을 출력하세요.\n25. [rep_end(1)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int cake[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &cake[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == 4) printf(\" \"); else if (j == 4) printf(\" \"); else if (i == j) printf(\" \"); else if (i + j == 8) printf(\" \"); else printf(\"%u \", cake[i][j]); } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 2D 배열 cake를 정의하고, 9x9 크기로 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. 입력으로 받은 값을 cake 배열의 i,j 위치에 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] i가 4인지 확인하는 조건문을 작성하세요.\n11. i가 4이면 공백을 출력하세요.\n12. [cond_end(2)]\n13. [cond_start(2)] j가 4인지 확인하는 조건문을 작성하세요.\n14. j가 4이면 공백을 출력하세요.\n15. [cond_end(2)]\n16. [cond_start(2)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n17. i와 j가 같으면 공백을 출력하세요.\n18. [cond_end(2)]\n19. [cond_start(2)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n20. i와 j의 합이 8이면 공백을 출력하세요.\n21. [cond_end(2)]\n22. 그렇지 않으면 해당 위치의 cake 배열 값을 출력하세요.\n23. [rep_end(2)]\n24. printf로 줄바꿈을 출력하세요.\n25. [rep_end(1)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int n; scanf(\"%d\", &n); for(int i=0;i<8;i++) { printf(\"%d\",n & 1); n = n >> 1; } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned int 형 변수 n을 선언하세요.  \n3. n에 대한 입력을 받으세요.  \n4. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.  \n5. n의 최하위 비트와 1을 비트 AND 연산하여 출력하세요.  \n6. n을 오른쪽으로 1비트 이동시키세요.  \n7. [rep_end(1)]  \n8. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int n; scanf(\"%d\", &n); int cnt = 0; int arr[8] = { 0 }; for (int i = 0; i < 8; i++) { arr[i] = n % 2; n = n / 2; } for (int i = 0; i < 8; i++) { printf(\"%d\", arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. n에 대한 입력을 받으세요.\n4. 정수형 변수 cnt를 0으로 초기화하세요.\n5. 정수형 배열 arr을 크기 8로 선언하고, 모든 요소를 0으로 초기화하세요.\n6. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n7. arr[i]에 n을 2로 나눈 나머지를 저장하세요.\n8. n을 2로 나눈 몫으로 업데이트하세요.\n9. [rep_end(1)]\n10. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n11. arr[i]의 값을 출력하세요.\n12. [rep_end(1)]\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int i; scanf(\"%x\", &i); int k = 0x1000; int n1 = (i - k) / 20; i -= n1 * 20; int n2 = (i - k) / 4; printf(\"%d %d\", n1, n2); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. i에 16진수 입력을 받으세요.\n4. 0x1000으로 초기화된 정수형 변수 k를 선언하세요.\n5. n1을 계산하여 (i - k) / 20을 저장하세요. \n6. i에서 n1 * 20을 빼세요.\n7. n2를 계산하여 (i - k) / 4를 저장하세요.\n8. n1과 n2의 값을 출력하세요.\n9. return 0;으로 프로그램을 종료하세요.\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int A; int B; scanf(\"%d %d\", &A, &B); int v = 5 * A + B; v = 4 * v; printf(\"%X\", 0x1000 + v); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 A와 B를 선언하세요.\n3. A와 B에 입력을 받으세요.\n4. 변수 v를 선언하고 5 * A + B로 초기화하세요.\n5. v를 4배로 증가시키세요.\n6. 0x1000과 v를 더한 값을 16진수 형식으로 출력하세요.\n7. return 0;으로 프로그램을 종료하세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int i[2] = { 0 }; scanf(\"%d %d\", &i[0], &i[1]); printf(\"%X\", i[0] * 4 * 5 + i[1] * 4 + 0x1000); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 배열 i를 크기 2로 선언하고, 초기값 0으로 설정하세요.\n3. M과 N의 값을 입력받기 위해 scanf 함수를 사용하세요.\n4. 입력받은 값을 i 배열의 첫 번째와 두 번째 요소에 저장하세요.\n5. 계산을 위해 i[0]에 4와 5를 곱하고, i[1]에 4를 곱한 값을 더한 후, 0x1000을 더합니다.\n6. 그 결과를 16진수 형식으로 출력하기 위해 printf 함수를 사용하세요.\n7. [func_def_end(1)]\n"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void){ int i; scanf(\"%X\", &i); int idx = ((i-0x1000)/4); printf(\"%d\", idx); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 i를 선언하세요.  \n3. 16진수 형식으로 i에 입력을 받으세요.  \n4. int형 변수 idx를 선언하고, i에서 0x1000을 뺀 후 4로 나눈 몫을 계산하여 저장하세요.  \n5. idx의 값을 출력하세요.  \n6. return 0;으로 프로그램을 종료하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int n; scanf(\"%d\", &n); for(int i=1;i<9;i++) { printf(\"%d\", n & 1); n = n >> 1; } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. n의 값을 입력 받으세요.\n4. [rep_start(1)] i를 1부터 8까지 반복하는 for 루프를 작성하세요.\n5. n의 최하위 비트가 1인지 확인하여 출력하세요.\n6. n을 오른쪽으로 1비트 시프트하여 다음 비트를 준비하세요.\n7. [rep_end(1)]\n8. return 0;으로 프로그램을 종료하세요.\n9. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int A[100][100] = {0}; for (int i = 1; i <= 9; i++) { for (int j = 1; j <= 9 ; j++) { scanf(\"%u\", &A[i][j]); } } for (int i = 1; i <= 9; i++) { for (int j = 1; j <= 9; j++) { if (i == j) printf(\" \"); else if (i + j == 10) printf(\" \"); else if (i == 5) printf(\" \"); else if (j == 5) printf(\" \"); else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int 형 2차원 배열 A를 100x100 크기로 선언하고 초기화하세요.\n3. [rep_start(1)] i를 1부터 9까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 1부터 9까지 반복하는 for 루프를 작성하세요.\n5. scanf 함수를 사용하여 A[i][j]에 값을 입력받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 1부터 9까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 1부터 9까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n11. i와 j가 같으면 공백을 출력하세요.\n12. [cond_end(3)]\n13. [cond_start(3)] i와 j의 합이 10인지 확인하는 조건문을 작성하세요.\n14. i와 j의 합이 10이면 공백을 출력하세요.\n15. [cond_end(3)]\n16. [cond_start(3)] i가 5인지 확인하는 조건문을 작성하세요.\n17. i가 5이면 공백을 출력하세요.\n18. [cond_end(3)]\n19. [cond_start(3)] j가 5인지 확인하는 조건문을 작성하세요.\n20. j가 5이면 공백을 출력하세요.\n21. [cond_end(3)]\n22. 그 외의 경우에는 A[i][j]을 출력하세요.\n23. [rep_end(2)]\n24. printf를 사용하여 줄 바꿈을 출력하세요.\n25. [rep_end(1)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int N; scanf(\"%d\", &N); N = N & 102; printf(\"%d\", N); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 N을 선언하세요.  \n3. N에 입력을 받으세요.  \n4. N의 값을 102와 비트 AND 연산을 수행하여 다시 N에 저장하세요.  \n5. N의 값을 출력하세요.  \n6. return 0;으로 프로그램을 종료하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main(){ int A; scanf(\"%x\",&A); A = A-0x1000; A = A/4; int B = A/5; int C = A%5; printf(\"%d %d\",B,C); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 A를 선언하세요.\n3. 16진수 형식으로 A에 입력을 받으세요.\n4. A에서 0x1000을 빼세요.\n5. A를 4로 나누어 A의 값을 수정하세요.\n6. int형 변수 B를 선언하고 A를 5로 나누어 저장하세요.\n7. int형 변수 C를 선언하고 A를 5로 나눈 나머지를 저장하세요.\n8. B와 C의 값을 출력하세요.\n9. return 0;으로 프로그램을 종료하세요.\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int N; scanf(\"%u\", &N); for (int i = 0; i < 8; i++) { printf(\"%d\", N >> i & 0x01); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. N을 i만큼 오른쪽으로 shift하고, 0x01로 AND 연산하여 결과를 출력하세요.\n6. [rep_end(1)]\n7. return 0;으로 프로그램을 종료하세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n; scanf(\"%d\", &n); for (int i = 0; i < 8; i++) { printf(\"%d\", (n >> i) & 0x01); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. n에 정수 입력을 받으세요.\n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. n의 i번째 비트를 추출하여 출력하세요. (n을 i만큼 오른쪽으로 쉬프트하고 0x01과 비트 AND 연산을 수행하세요)\n6. [rep_end(1)]\n7. return 0;으로 프로그램을 종료하세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include<stdio.h> int main() { unsigned int A[9][9] = { 0 }; for (int i = 0; i < 9; i++) { scanf(\"%u %u %u %u %u %u %u %u %u\", &A[i][0], &A[i][1], &A[i][2], &A[i][3], &A[i][4], &A[i][5], &A[i][6], &A[i][7], &A[i][8]); } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if ((i == j)||(j==4)||(j==8-i)||(i==4)) printf(\" \"); else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] `int` 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int 배열 A를 0으로 초기화하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. 9개의 unsigned int 값을 입력받아 배열 A의 i번째 행에 저장하세요.\n5. [rep_end(1)]\n6. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n7. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n8. [cond_start(2)] 현재 위치가 대각선(i == j), 중간열(j == 4), 대각선 반대(j == 8 - i), 또는 중앙행(i == 4)인지 확인하는 조건문을 작성하세요.\n9. 해당 위치라면 공백을 출력하세요.\n10. [cond_end(2)]\n11. 그렇지 않다면 배열 A의 i,j 요소를 출력하세요.\n12. 공백과 숫자 사이에 띄어쓰기를 두세요.\n13. [rep_end(2)]\n14. 행이 끝나면 줄바꿈을 출력하세요.\n15. [rep_end(1)]\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int a = 0; scanf(\"%u\", &a); unsigned int b[8] = { 0 }; for (int i = 0; i < 8; i++) { b[i] = a & 1; a = a >> 1; } for (int i = 0; i < 8; i++) { printf(\"%u\", b[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 a를 0으로 초기화하세요.\n3. a에 사용자로부터 unsigned int를 입력받으세요.\n4. unsigned int형 배열 b를 선언하고 8개의 요소를 0으로 초기화하세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. b[i]에 a의 최하위 비트를 저장하세요 (a & 1).\n7. a를 오른쪽으로 1비트 시프트하여 a의 값을 업데이트하세요.\n8. [rep_end(1)]\n9. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n10. b[i]의 값을 출력하세요.\n11. [rep_end(1)]\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { unsigned int a = 0; scanf(\"%u\", &a); int b[8] = { 0 }; for (int i = 0; i < 8; i++) { b[i] = a % 2; a = a / 2; } b[0] = 0; b[3] = 0; b[4] = 0; b[7] = 0; int sum = 0; int two = 1; for (int i = 0; i < 8; i++) { if (b[i] == 0) { continue; } else { for (int j = 1; j < 1 + i; j++) { two = two * 2; } sum = sum + two; two = 1; } } printf(\"%d\", sum); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 a를 0으로 초기화하세요.\n3. a에 대한 입력을 받으세요.\n4. int형 배열 b를 크기 8로 선언하고, 모든 요소를 0으로 초기화하세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. a의 2로 나눈 나머지를 b[i]에 저장하세요. (a를 2진수의 각 자리로 변환)\n7. a를 2로 나누어 업데이트하세요.\n8. [rep_end(1)]\n9. 배열 b의 0번째, 3번째, 4번째, 7번째 인덱스를 0으로 설정하여 불필요한 비트를 제거하세요.\n10. int형 변수 sum을 0으로 초기화하세요.\n11. int형 변수 two를 1로 초기화하세요.\n12. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n13. [cond_start(2)] b[i]의 값이 0인지 확인하는 조건문을 작성하세요.\n14. b[i]가 0이면 다음 반복으로 넘어가세요. (continue)\n15. [cond_end(2)]\n16. [rep_start(2)] j를 1로 초기화한 후 i+1까지 반복하는 for 루프를 작성하세요.\n17. two에 2를 곱하세요.\n18. [rep_end(2)]\n19. sum에 two를 더하세요.\n20. two를 1로 초기화하세요.\n21. [rep_end(1)]\n22. sum의 값을 출력하세요.\n23. return 0;으로 프로그램을 종료하세요.\n24. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int N = 0; int i; scanf(\"%d\", &N); for (i = 0; i < 8; i++) { if (N >> i & 1) { printf(\"1\"); } else { printf(\"0\"); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 0으로 초기화하세요.\n3. 정수형 변수 i를 선언하세요.\n4. N에 대한 입력을 받으세요.\n5. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. [cond_start(2)] N의 i번째 비트가 1인지 확인하는 조건문을 작성하세요.\n7. i번째 비트가 1이라면 \"1\"을 출력하세요.\n8. [cond_end(2)]\n9. [cond_start(2)] i번째 비트가 1이 아닐 경우에 처리하는 조건문을 작성하세요.\n10. i번째 비트가 0이라면 \"0\"을 출력하세요.\n11. [cond_end(2)]\n12. [rep_end(1)]\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { unsigned int arr[10][10] = { 0 }; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &arr[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if ((i == j) || (i+j==8)) arr[i][j] = 999; if (i == 4 || j == 4) { arr[i][j] = 999; } } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (arr[i][j] != 999) { printf(\"%u \", arr[i][j]); } else { printf(\" \"); } } printf(\"\\n\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의합니다. (매개변수 없음)\n2. 10x10 크기의 unsigned int형 2차원 배열 arr을 0으로 초기화합니다.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n5. 사용자로부터 arr[i][j]에 대한 unsigned int 값을 입력받습니다.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n10. [cond_start(2)] i와 j가 대각선(즉, i == j)에 있는지, 또는 반대 대각선(i + j == 8)에 있는지 확인하는 조건문을 작성합니다.\n11. 대각선에 있으면 arr[i][j]의 값을 999로 설정합니다.\n12. [cond_end(2)]\n13. [cond_start(2)] i가 4이거나 j가 4인지 확인하는 조건문을 작성합니다.\n14. i가 4이거나 j가 4이면 arr[i][j]를 999로 설정합니다.\n15. [cond_end(2)]\n16. [rep_end(2)]\n17. [rep_end(1)]\n18. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n19. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성합니다.\n20. [cond_start(2)] arr[i][j]의 값이 999가 아닌지 확인하는 조건문을 작성합니다.\n21. 999가 아니면 arr[i][j]를 출력합니다.\n22. [cond_end(2)]\n23. [cond_start(2)] arr[i][j]의 값이 999인 경우를 처리하는 조건문을 작성합니다.\n24. 999인 경우에는 공백을 출력합니다.\n25. [cond_end(2)]\n26. 줄 바꿈을 출력합니다.\n27. [rep_end(2)]\n28. [rep_end(1)]\n29. return 0;으로 프로그램을 종료합니다.\n30. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { unsigned int a[9][9]; for (int i = 0;i < 9;i++) { for (int j = 0;j < 9;j++) { scanf(\"%u\", &a[i][j]); } } for (int i = 0;i < 9;i++) { for (int j = 0;j < 9;j++) { if (i == j) { printf(\" \"); } else if (i + j == 8) { printf(\" \"); } else if (i==4||j == 4) { printf(\" \"); } else { printf(\"%u \", a[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 9x9 크기의 unsigned int형 배열 a를 선언하세요.  \n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n5. 배열 a의 각 원소에 대한 입력을 받기 위해 scanf를 사용하세요.  \n6. [rep_end(2)]  \n7. [rep_end(1)]  \n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n10. [cond_start(2)] i와 j가 같은지 확인하는 조건문을 작성하세요.  \n11. i와 j가 같다면 공백을 출력하세요.  \n12. [cond_end(2)]  \n13. [cond_start(2)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.  \n14. i와 j의 합이 8이라면 공백을 출력하세요.  \n15. [cond_end(2)]  \n16. [cond_start(2)] i가 4이거나 j가 4인지 확인하는 조건문을 작성하세요.  \n17. i나 j가 4라면 공백을 출력하세요.  \n18. [cond_end(2)]  \n19. 그렇지 않으면 배열 a의 i, j 원소를 출력하세요.  \n20. [rep_end(2)]  \n21. 줄바꿈을 위해 printf를 호출하세요.  \n22. [rep_end(1)]  \n23. return 0;으로 프로그램을 종료하세요.  \n24. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int a[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &a[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) { printf(\" \"); } else if ((9 - j-1)==i) { printf(\" \"); } else if (i == (9/2)) { printf(\" \"); } else if (j == (9/2)) { printf(\" \"); } else { printf(\"%u \", a[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 정수형 배열 a를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf를 이용해 a[i][j]에 정수를 입력 받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n11. i와 j가 같다면 공백을 출력하세요.\n12. [cond_end(3)]\n13. [cond_start(3)] (9 - j - 1)이 i와 같은지 확인하는 조건문을 작성하세요.\n14. (9 - j - 1)과 i가 같다면 공백을 출력하세요.\n15. [cond_end(3)]\n16. [cond_start(3)] i가 4인지 확인하는 조건문을 작성하세요.\n17. i가 4라면 공백을 출력하세요.\n18. [cond_end(3)]\n19. [cond_start(3)] j가 4인지 확인하는 조건문을 작성하세요.\n20. j가 4라면 공백을 출력하세요.\n21. [cond_end(3)]\n22. [cond_start(3)] 위의 조건들에 해당하지 않으면 배열 a[i][j]의 값을 출력하세요.\n23. 배열 a[i][j]의 값을 공백과 함께 출력하세요.\n24. [cond_end(3)]\n25. [rep_end(2)]\n26. printf로 줄을 바꾸세요.\n27. [rep_end(1)]\n28. return 0;으로 프로그램을 종료하세요.\n29. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void) { int n = 0; int i = 0; int dec[8] = { 0 }; scanf(\"%d\", &n); while (n > 0) { dec[i] = n % 2; n = n / 2; i++; } dec[0] = 0; dec[3] = 0; dec[4] = 0; dec[7] = 0; int two = 1; int sum = 0; for (int i = 0; i < 7; i++) { if (dec[i] == 1) { sum += two; } two *= 2; } printf(\"%d\", sum); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 n을 0으로 초기화하여 선언하세요.  \n3. 정수형 변수 i를 0으로 초기화하여 선언하세요.  \n4. 크기가 8인 정수형 배열 dec를 0으로 초기화하여 선언하세요.  \n5. n에 사용자로부터 정수를 입력받으세요.  \n6. [rep_start(1)] n이 0보다 큰 동안 반복하는 while 루프를 시작하세요.  \n7. dec 배열의 현재 인덱스 i에 n을 2로 나눈 나머지를 저장하세요.  \n8. n을 2로 나눈 몫으로 업데이트하세요.  \n9. i를 1 증가시키세요.  \n10. [rep_end(1)]  \n11. dec 배열의 첫 번째 인덱스에 0을 저장하세요.  \n12. dec 배열의 네 번째 인덱스에 0을 저장하세요.  \n13. dec 배열의 다섯 번째 인덱스에 0을 저장하세요.  \n14. dec 배열의 여덟 번째 인덱스에 0을 저장하세요.  \n15. int형 변수 two를 1로 초기화하여 선언하세요.  \n16. int형 변수 sum을 0으로 초기화하여 선언하세요.  \n17. [rep_start(1)] i를 0부터 6까지 반복하는 for 루프를 시작하세요.  \n18. [cond_start(2)] dec 배열의 i번째 요소가 1인지 확인하는 조건문을 작성하세요.  \n19. dec[i]가 1이라면, sum에 두의 값(two)을 더하세요.  \n20. 두의 값을 2배로 증가시키세요.  \n21. [cond_end(2)]  \n22. [rep_end(1)]  \n23. sum의 값을 출력하세요.  \n24. return 0;으로 프로그램을 종료하세요.  \n25. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int A, B; scanf(\"%d %d\", &A, &B); printf(\"%X\", 4096 + 20 * A + 4 * B); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 A와 B를 선언하세요.  \n3. A와 B에 입력을 받으세요.  \n4. printf 함수를 이용하여 특정 계산의 결과를 16진수 형식으로 출력하세요. (계산식: 4096 + 20 * A + 4 * B)  \n5. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> main() { unsigned int a[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &a[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) printf(\" \"); else if (i == 4 || j == 4) printf(\" \"); else if (i + j == 8) printf(\" \"); else printf(\"%u \", a[i][j]); } printf(\"\\n\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] 메인 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int형 2차원 배열 a를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 첫 번째 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 두 번째 for 루프를 작성하세요.\n5. 배열 a의 각 요소에 대해 입력을 받아 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 새로운 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 또 다른 for 루프를 작성하세요.\n10. [cond_start(2)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n11. i와 j가 같다면 공백을 출력하세요.\n12. [cond_end(2)]\n13. [cond_start(2)] i가 4이거나 j가 4인지 확인하는 조건문을 작성하세요.\n14. i가 4이거나 j가 4라면 공백을 출력하세요.\n15. [cond_end(2)]\n16. [cond_start(2)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n17. i와 j의 합이 8라면 공백을 출력하세요.\n18. [cond_end(2)]\n19. 그렇지 않다면 a[i][j]의 값을 출력하세요.\n20. [rep_end(2)]\n21. 각 행의 출력 후 줄 바꿈을 추가하세요.\n22. [rep_end(1)]\n23. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n; scanf(\"%d\", &n); for (int i = 0; i < 8; i++) ((n >> i) & 1) ? printf(\"1\") : printf(\"0\"); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 n을 선언하세요.  \n3. n에 대한 입력을 받으세요.  \n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.  \n5. [cond_start(2)] n의 i번째 비트가 1인지 확인하는 조건문을 작성하세요.  \n6. i번째 비트가 1이라면 \"1\"을 출력하세요.  \n7. [cond_end(2)]  \n8. 그렇지 않으면 \"0\"을 출력하세요.  \n9. [rep_end(1)]  \n10. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int A; int x = 0; int y = 0; scanf(\"%X\", &A); while (1) { if (A < 0x1014) { break; } A = A - 20; x = x + 1; } while (1) { if (A < 0x1004) { break; } A = A - 4; y = y + 1; } printf(\"%d %d\", x, y); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 A를 선언하세요.  \n3. int형 변수 x를 0으로 초기화하세요.  \n4. int형 변수 y를 0으로 초기화하세요.  \n5. A에 16진수 형태로 입력을 받으세요.  \n6. [rep_start(1)] 무한 루프를 시작합니다.  \n7. [cond_start(2)] A가 0x1014보다 작은지 확인하는 조건문을 작성하세요.  \n8. A가 0x1014보다 작다면 루프를 종료하세요.  \n9. A에서 20을 빼세요.  \n10. x에 1을 더하세요.  \n11. [cond_end(2)]  \n12. [rep_end(1)] 루프를 종료합니다.  \n13. [rep_start(1)] 또 다른 무한 루프를 시작합니다.  \n14. [cond_start(2)] A가 0x1004보다 작은지 확인하는 조건문을 작성하세요.  \n15. A가 0x1004보다 작다면 루프를 종료하세요.  \n16. A에서 4를 빼세요.  \n17. y에 1을 더하세요.  \n18. [cond_end(2)]  \n19. [rep_end(1)] 루프를 종료합니다.  \n20. x와 y의 값을 출력하세요.  \n21. return 0;으로 프로그램을 종료하세요.  \n22. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { unsigned int cake[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &cake[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) { if (i == 4 || j == 4) { printf(\" \"); } else { printf(\" \"); } } else if (i == 4 || j == 4) { printf(\" \"); } else if (j == 4) { printf(\" \"); } else if (i + j == 8) { printf(\" \"); } else { printf(\"%u \", cake[i][j]); } } if (i == 4) { printf(\"\\n\"); } else { printf(\"\\n\"); } } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 2차원 배열 cake[9][9]을 선언하여 케이크 데이터를 저장할 공간을 만듭니다.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf를 이용하여 cake[i][j]에 unsigned int 값을 입력 받습니다.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n11. [cond_start(3)] i가 4인지 또는 j가 4인지 확인하는 조건문을 작성하세요.\n12. 해당하는 경우, 공백을 출력합니다.\n13. [cond_end(3)]\n14. [cond_end(2)]\n15. [cond_start(2)] i가 4이거나 j가 4인지 확인하는 조건문을 작성하세요.\n16. 해당하는 경우, 공백을 출력합니다.\n17. [cond_end(2)]\n18. [cond_start(2)] j가 4인지 확인하는 조건문을 작성하세요.\n19. 해당하는 경우, 공백을 출력합니다.\n20. [cond_end(2)]\n21. [cond_start(2)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n22. 해당하는 경우, 공백을 출력합니다.\n23. [cond_end(2)]\n24. 그렇지 않은 경우, cake[i][j]의 값을 출력합니다.\n25. [cond_start(2)] i가 4인지 확인하는 조건문을 작성하세요.\n26. 해당하는 경우, 줄 바꿈을 출력합니다.\n27. [cond_end(2)]\n28. 그렇지 않은 경우, 줄 바꿈을 출력합니다.\n29. [rep_end(2)]\n30. [rep_end(1)]\n31. return 0;으로 프로그램을 종료하세요.\n32. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int A; int k =0; scanf(\"%X\", &A); while (1) { if (A < 0x1004) { break; } A = A - 4; k = k + 1; } printf(\"%d\", k); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 A를 선언하세요.\n3. 정수형 변수 k를 0으로 초기화하세요.\n4. A에 16진수 입력을 받으세요.\n5. [rep_start(1)] 무한 반복을 위한 while 루프를 작성하세요.\n6. [cond_start(2)] A가 0x1004보다 작은지 확인하는 조건문을 작성하세요.\n7. A가 0x1004보다 작다면 반복을 종료하세요.\n8. [cond_end(2)]\n9. A에서 4를 빼세요.\n10. k에 1을 더하여 k의 값을 증가시키세요.\n11. [rep_end(1)]\n12. k의 값을 출력하세요.\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int N; unsigned int A[1000], T; scanf(\"%d\", &N); for (int i = 0; i < N; i++) { scanf(\"%u\", &A[i]); } scanf(\"%u\", &T); for (int i = 0; i < N; i++) { if (A[i] <= T)printf(\"0 \"); else printf(\"%u \", A[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. 크기가 1000인 unsigned int형 배열 A를 선언하세요.\n4. unsigned int형 변수 T를 선언하세요.\n5. N의 값을 입력받으세요.\n6. [rep_start(1)] i를 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n7. 배열 A의 i번째 요소에 대한 값을 입력받으세요.\n8. [rep_end(1)]\n9. T의 값을 입력받으세요.\n10. [rep_start(1)] i를 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] 배열 A의 i번째 요소가 T보다 작거나 같은지 확인하는 조건문을 작성하세요.\n12. A[i]가 T보다 작거나 같다면 \"0 \"을 출력하세요.\n13. [cond_end(2)]\n14. 그렇지 않다면 A[i] 값을 출력하세요.\n15. [rep_end(1)]\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void){ int i, j; scanf(\"%d %d\", &i, &j); printf(\"%X\", 0x1000 + i*20 + j*4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i와 j를 선언하세요.\n3. i와 j에 대한 입력을 받으세요.\n4. 0x1000에 i에 20을 곱하고 j에 4를 곱한 값을 더한 후 16진수 형태로 출력하세요.\n5. return 0;으로 프로그램을 종료하세요.\n6. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int A[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &A[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == 4) { printf(\" \"); } else if (j == 4) { printf(\" \"); } else if (i == j) { printf(\" \"); } else if ((i + j) == 8) { printf(\" \"); } else { printf(\"%u \", A[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 배열 A를 정의하여 정수형 데이터를 저장할 수 있는 공간을 할당하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf 함수를 사용하여 2차원 배열 A의 각 요소에 입력값을 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] i가 4인지 확인하는 조건문을 작성하세요.\n11. i가 4라면 공백을 출력하세요.\n12. [cond_end(3)]\n13. [cond_start(3)] j가 4인지 확인하는 조건문을 작성하세요.\n14. j가 4라면 공백을 출력하세요.\n15. [cond_end(3)]\n16. [cond_start(3)] i와 j가 같다면 대각선 요소이므로 공백을 출력하세요.\n17. [cond_end(3)]\n18. [cond_start(3)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n19. i와 j의 합이 8이라면 공백을 출력하세요.\n20. [cond_end(3)]\n21. [cond_start(3)] 위의 모든 조건을 만족하지 않을 경우 A[i][j]의 값을 출력하세요.\n22. [cond_end(3)]\n23. [rep_end(2)]\n24. printf를 사용하여 줄 바꿈을 출력하세요.\n25. [rep_end(1)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int A[10][10] = { 0 }; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &A[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) { printf(\" \"); } else if (j == 8 - i) { printf(\" \"); } else if (i == 4) { continue; } else if (j == 4) { printf(\" \"); continue; } else printf(\"%u \", A[i][j]); } printf(\"\\n\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 2차원 배열 A를 선언하고 초기화합니다. (10x10 크기, 모든 값 0)\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf 함수를 사용하여 배열 A의 각 요소에 입력을 받습니다.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] 현재 위치가 대각선인지 확인하는 조건문을 작성하세요.\n11. 대각선 위치(i == j)라면 공백을 출력합니다.\n12. [cond_end(2)]\n13. [cond_start(2)] 현재 위치가 반대 대각선인지 확인하는 조건문을 작성하세요.\n14. 반대 대각선 위치(j == 8 - i)라면 공백을 출력합니다.\n15. [cond_end(2)]\n16. [cond_start(2)] 현재 i가 4인 경우를 확인하는 조건문을 작성하세요.\n17. i가 4라면 continue를 사용하여 다음 반복으로 넘어갑니다.\n18. [cond_end(2)]\n19. [cond_start(2)] 현재 j가 4인 경우를 확인하는 조건문을 작성하세요.\n20. j가 4라면 공백을 출력하고 continue를 사용하여 다음 반복으로 넘어갑니다.\n21. [cond_end(2)]\n22. 아니라면 배열 A의 값을 출력합니다.\n23. [rep_end(2)]\n24. printf 함수를 사용하여 줄 바꿈을 출력합니다.\n25. [rep_end(1)]\n26. return 0;으로 프로그램을 종료하세요.\n27. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { unsigned int a; scanf(\"%u\", &a); for (int i = 0;i < 8;i++) { if (a % 2 == 1) { printf(\"1\"); a = a / 2; } else { printf(\"0\"); a = a / 2; } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수의 정의를 시작합니다. (매개변수 없음)\n2. unsigned int형 변수 a를 선언합니다.\n3. a에 대한 입력을 scanf를 사용하여 받습니다.\n4. [rep_start(1)] i를 이용해 0부터 7까지 반복하는 for 루프를 시작합니다.\n5. [cond_start(2)] a가 2로 나누었을 때 나머지가 1인지 확인하는 조건문을 작성합니다.\n6. 만약 a가 홀수라면 \"1\"을 출력합니다.\n7. a를 2로 나눈 값으로 업데이트합니다.\n8. [cond_end(2)]\n9. [cond_start(2)] a가 짝수인 경우의 조건문을 작성합니다.\n10. a가 짝수라면 \"0\"을 출력합니다.\n11. a를 2로 나눈 값으로 업데이트합니다.\n12. [cond_end(2)]\n13. [rep_end(1)]\n14. return 0;으로 프로그램을 종료합니다.\n15. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n; scanf(\"%d\", &n); printf(\"%d\", n &= 0b01100110); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. n에 대한 입력을 받으세요.\n4. n을 0b01100110 비트마스크와 AND 연산하여 결과를 출력하세요.\n5. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int a; scanf(\"%u\", &a); for (int i = 0; i < 8; i++) { if (a & (1 << i))printf(\"1\"); else printf(\"0\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 a를 선언하세요.\n3. a에 대한 입력을 받으세요. (unsigned int형)\n4. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. [cond_start(2)] a의 i 번째 비트가 1인지 확인하는 조건문을 작성하세요.\n6. i 번째 비트가 1이라면 \"1\"을 출력하세요.\n7. [cond_end(2)]\n8. 그렇지 않으면 \"0\"을 출력하세요.\n9. [rep_end(1)]\n10. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include<stdio.h> int main() { unsigned int N = 0; scanf(\"%u\", &N); for (int i = 0; i < 8; i++) { printf(\"%d\", N & 0x01); N >>= 1; } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned int형 변수 N을 0으로 초기화하세요.  \n3. N에 대해 사용자의 입력을 받으세요.  \n4. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.  \n5. N의 최하위 비트를 출력하세요.  \n6. N을 오른쪽으로 1비트 시프트하세요.  \n7. [rep_end(1)]  \n8. return 0;으로 프로그램을 종료하세요.  \n9. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int A[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &A[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i + j == 8)printf(\" \"); else if (i == j)printf(\" \"); else if (i == 4)printf(\" \"); else if (j == 4)printf(\" \"); else printf(\"%u \", A[i][j]); } if (i != 8)printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 배열 A를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. A[i][j]에 사용자로부터 입력받은 unsigned int 값을 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(3)] i와 j의 합이 8인지 확인하는 조건문을 작성하세요.\n11. i와 j의 합이 8이라면 공백을 출력하세요.\n12. [cond_end(3)]\n13. [cond_start(3)] i와 j가 같은지 확인하는 조건문을 작성하세요.\n14. i와 j가 같다면 공백을 출력하세요.\n15. [cond_end(3)]\n16. [cond_start(3)] i가 4인지 확인하는 조건문을 작성하세요.\n17. i가 4라면 공백을 출력하세요.\n18. [cond_end(3)]\n19. [cond_start(3)] j가 4인지 확인하는 조건문을 작성하세요.\n20. j가 4라면 공백을 출력하세요.\n21. [cond_end(3)]\n22. 그렇지 않다면 A[i][j]의 값을 출력하세요.\n23. [cond_end(3)]\n24. [rep_end(2)]\n25. [cond_start(1)] i가 8이 아닐 경우 개행 문자를 출력하는 조건문을 작성하세요.\n26. i가 8이 아닐 경우 개행 문자를 출력하세요.\n27. [cond_end(1)]\n28. [rep_end(1)]\n29. return 0;으로 프로그램을 종료하세요.\n30. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int i = 0; scanf(\"%X\", &i); printf(\"%d %d\", (i - 0x1000) / (5 * 4), ((i - 0x1000) % 20) / 4); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 0으로 초기화하세요.\n3. 사용자로부터 hexadecimal 형식으로 입력을 받으세요.\n4. 입력받은 값을 변수 i에 저장하세요.\n5. i에서 0x1000을 빼고, 5 * 4로 나눈 값을 출력하세요.\n6. i에서 0x1000을 빼고, 20으로 나눈 나머지 값을 4로 나눈 값을 출력하세요.\n7. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { const int n = 9; unsigned int matrix[n][n]; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { scanf(\"%u\", &matrix[i][j]); } } for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { if ((i == j) || (i + j) == 8 || (i == n / 2) || (j == n / 2)) { printf(\" \"); } else { printf(\"%u \", matrix[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 상수 int형 변수 n을 9로 초기화하여 정방형 행렬의 크기를 정의하세요.\n3. unsigned int형 2차원 배열 matrix를 n x n 크기로 선언하세요.\n4. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n5. [rep_start(2)] j를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n6. 행렬의 각 요소를 사용자로부터 입력받아 matrix[i][j]에 저장하세요.\n7. [rep_end(2)]\n8. [rep_end(1)]\n9. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n10. [rep_start(2)] j를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] 현재 요소의 위치가 대각선, 반대 대각선, 중앙 행 또는 중앙 열에 있는지 확인하는 조건문을 작성하세요.\n12. 위치가 위 조건에 맞으면 공백을 출력하세요.\n13. 그렇지 않으면 matrix[i][j]의 값을 출력하세요.\n14. [cond_end(2)]\n15. 한 행이 끝나면 줄바꿈을 출력하세요.\n16. [rep_end(2)]\n17. [rep_end(1)]\n18. return 0;으로 프로그램을 종료하세요.\n19. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int A; scanf(\"%X\", &A); printf(\"%d %d\", (A - 4096) / 20, ((A - 4096) % 20) / 4); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 A를 선언하세요.\n3. A에 16진수 입력을 받으세요.\n4. A에서 4096을 빼고 20으로 나눈 몫과 나머지를 20으로 나눈 후 4로 나누어서 출력하세요.\n5. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int n[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &n[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j || i == 4 || j == 4 || j+i == 8) { printf(\" \"); } else { printf(\"%u \", n[i][j]); } } printf(\"\\n\"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 9x9 크기의 unsigned int형 2차원 배열 n을 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. n 배열의 각 요소에 사용자로부터 unsigned int형 값을 입력받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(1)] i와 j가 같은지, i가 4인지, j가 4인지, 또는 i+j가 8인지 확인하는 조건문을 작성하세요.\n11. 조건에 부합하면 공백을 출력하세요.\n12. [cond_end(1)]\n13. 조건에 해당되지 않으면 n[i][j] 값을 출력하세요.\n14. [rep_end(2)]\n15. 줄 바꿈을 위해 개행 문자를 출력하세요.\n16. [rep_end(1)]\n17. return 0;으로 프로그램을 종료하세요.\n18. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int arr[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &arr[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if ((i == j) || (i + j == 8)) { arr[i][j] = ' '; } } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if ((i == j) || (i + j == 8)||j==4||i==4) { printf(\" \"); if (j < 8) { printf(\" \"); } } else { printf(\"%u\", arr[i][j]); if (j < 8) { printf(\" \"); } } } if (i < 8) { printf(\"\\n\"); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] 반환형이 없는 main 함수를 정의하세요.\n2. unsigned int 형의 9x9 배열 arr를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. arr 배열의 각 요소에 값을 입력받아 저장하세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] i가 j와 같거나 i+j가 8인지 확인하는 조건문을 작성하세요.\n11. 해당 위치의 arr 배열 값을 공백으로 설정하세요.\n12. [cond_end(2)]\n13. [rep_end(2)]\n14. [rep_end(1)]\n15. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n16. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n17. [cond_start(2)] i가 j와 같거나 i+j가 8이거나 j가 4이거나 i가 4인지 확인하는 조건문을 작성하세요.\n18. 공백을 출력하세요.\n19. [cond_start(3)] j가 8보다 작은지 확인하는 조건문을 작성하세요.\n20. 추가로 공백을 출력하세요.\n21. [cond_end(3)]\n22. [cond_end(2)]\n23. [cond_else(2)] 위의 조건을 만족하지 않으면 arr 배열의 값 출력하세요.\n24. [cond_start(3)] j가 8보다 작은지 확인하는 조건문을 작성하세요.\n25. 추가로 공백을 출력하세요.\n26. [cond_end(3)]\n27. [rep_end(2)]\n28. [cond_start(1)] i가 8보다 작은지 확인하는 조건문을 작성하세요.\n29. 줄바꿈을 출력하세요.\n30. [cond_end(1)]\n31. [rep_end(1)]\n32. return 0;으로 프로그램을 종료하세요.\n33. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { int n; scanf(\"%d\", &n); int arr[8]; for (int i = 7; i >= 0; i--) { int temp = n % 2; arr[i] = temp; n = n / 2; } for (int i = 7; i >= 0; i--) { printf(\"%d\", arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. n에 대한 입력을 받으세요.\n4. 정수형 배열 arr을 선언하고 8개의 요소를 준비하세요.\n5. [rep_start(1)] i를 선언해 7부터 0까지 감소하는 for 루프를 작성하세요.\n6. n을 2로 나눈 나머지를 구하여 temp에 저장하세요.\n7. temp 값을 arr[i]에 저장하세요.\n8. n을 2로 나누어 업데이트하세요.\n9. [rep_end(1)]\n10. [rep_start(1)] i를 선언해 7부터 0까지 감소하는 for 루프를 작성하세요.\n11. arr[i]의 값을 출력하세요.\n12. [rep_end(1)]\n13. return 0;으로 프로그램을 종료하세요.\n14. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int A, B; scanf(\"%u %u\", &A, &B); printf(\"%0X\", 0x1000 + A * 20 + B * 4); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 A와 B를 선언하세요.\n3. A와 B에 입력을 받으세요. (정수형, 부호 없는 10진수 입력)\n4. A에 20을 곱하고 B에 4를 곱한 값을 더한 후, 0x1000을 더한 결과를 16진수 형식으로 출력하세요.\n5. return 0;으로 프로그램을 종료하세요.\n6. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main(){ unsigned int A[9][9]; for(int i=0;i<9;i++){ for(int j=0;j<9;j++){ scanf(\"%u \",&A[i][j]); } } for(int i=0;i<9;i++){ for(int j=0;j<9;j++){ if(i == j || i+j == 8|| i == 4 || j ==4){ printf(\" \"); } else{ printf(\"%u \",A[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 2차원 unsigned int 배열 A를 선언하여 9x9 크기로 정의하세요.  \n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n5. scanf 함수를 이용하여 배열 A의 각 요소에 입력을 받으세요.  \n6. [rep_end(2)]  \n7. [rep_end(1)]  \n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n10. [cond_start(2)] i와 j가 같은지, 또는 i+j가 8인지, 또는 i가 4인지, 또는 j가 4인지 확인하는 조건문을 작성하세요.  \n11. 조건이 참이라면 공백을 출력하세요.  \n12. [cond_end(2)]  \n13. 조건이 거짓이라면 A[i][j]의 값을 출력하세요.  \n14. [rep_end(2)]  \n15. 줄 바꿈을 위해 printf(\"\\n\")을 호출하세요.  \n16. [rep_end(1)]  \n17. return 0;으로 프로그램을 종료하세요.  \n18. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int a; unsigned int b[100]; unsigned int c; scanf(\"%u\", &a); for (int i = 0; i < a; i++) { scanf(\"%u\", &b[i]); } scanf(\"%u\", &c); for (int i = 0; i < a; i++) { if (b[i] <= c) { b[i] = 0; } } for (int i = 0; i < a; i++) { printf(\"%u \", b[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned int형 변수 a를 선언하세요.  \n3. 최대 100개의 unsigned int형 값을 저장할 수 있는 배열 b를 선언하세요.  \n4. unsigned int형 변수 c를 선언하세요.  \n5. a의 값을 입력받기 위해 scanf를 사용하여 입력을 받으세요.  \n6. [rep_start(1)] i를 0부터 a까지 반복하는 for 루프를 작성하세요.  \n7. b 배열의 i번째 요소에 값을 입력받기 위해 scanf를 사용하세요.  \n8. [rep_end(1)]  \n9. c의 값을 입력받기 위해 scanf를 사용하세요.  \n10. [rep_start(1)] i를 0부터 a까지 반복하는 for 루프를 작성하세요.  \n11. [cond_start(2)] b 배열의 i번째 요소가 c보다 작거나 같은지 확인하는 조건문을 작성하세요.  \n12. b 배열의 i번째 요소가 c보다 작거나 같으면 해당 값을 0으로 설정하세요.  \n13. [cond_end(2)]  \n14. [rep_end(1)]  \n15. [rep_start(1)] i를 0부터 a까지 반복하는 for 루프를 작성하세요.  \n16. printf 함수를 사용하여 b 배열의 i번째 요소를 출력하세요.  \n17. [rep_end(1)]  \n18. return 0;으로 프로그램을 종료하세요.  \n19. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int N; scanf(\"%d\", &N); int arr[8] = { 0 }; for (int i = 7; i >= 0; i--) { arr[i] = N % 2; N /= 2; } for (int i = 7; i >= 0; i--) { printf(\"%d\",arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned int형 변수 N을 선언하세요.  \n3. N에 대한 입력을 받으세요.  \n4. int형 배열 arr를 크기 8로 선언하고 모든 값을 0으로 초기화하세요.  \n5. [rep_start(1)] i를 7부터 0까지 감소시키며 반복하는 for 루프를 작성하세요.  \n6. arr[i]에 N을 2로 나눈 나머지를 저장하세요.  \n7. N을 2로 나누어 업데이트하세요.  \n8. [rep_end(1)]  \n9. [rep_start(1)] i를 7부터 0까지 감소시키며 반복하는 for 루프를 작성하세요.  \n10. arr[i]에 저장된 값을 출력하세요.  \n11. [rep_end(1)]  \n12. return 0;으로 프로그램을 종료하세요.  \n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int n = 0; scanf(\"%d\", &n); int a = 102; n = a & n; printf(\"%d\", n); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 n을 0으로 초기화하세요.  \n3. n에 값을 입력 받으세요.  \n4. 정수형 변수 a를 102로 초기화하세요.  \n5. n과 a의 비트 AND 연산을 수행하여 n에 다시 저장하세요.  \n6. n의 값을 출력하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int N; scanf(\"%d\", &N); for (int i = 0; i < 8; i++) { printf(\"%d\", N % 2); N = N / 2; } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 N을 선언하세요.  \n3. N에 사용자로부터 입력을 받으세요.  \n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.  \n5. N을 2로 나눈 나머지를 출력하세요.  \n6. N을 2로 나눈 결과로 업데이트하세요.  \n7. [rep_end(1)]  \n8. return 0;으로 프로그램을 종료하세요.  \n9. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int arr[100] = { 0x1000 }; int a = 0; scanf(\"%d\", &a); int x = 4; for (int i = 1; i < 100; i++) { arr[i] = 0x1000; arr[i] = arr[i] + x; x = x + 4; } printf(\"%X\", arr[a]); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 배열 arr을 선언하고 첫 번째 요소를 0x1000으로 초기화하세요.\n3. 정수형 변수 a를 선언하고 초기값으로 0을 설정하세요.\n4. a의 값을 입력받으세요.\n5. 정수형 변수 x를 4로 초기화하세요.\n6. [rep_start(1)] i를 선언해 1부터 99까지 반복하는 for 루프를 작성하세요.\n7. arr의 i번째 요소를 0x1000으로 설정하세요.\n8. arr의 i번째 요소에 x 값을 더하세요.\n9. x를 4만큼 증가시키세요.\n10. [rep_end(1)]\n11. arr[a]의 값을 16진수 형식으로 출력하세요.\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { unsigned num = 0; unsigned a[100] = { 0 }; unsigned cut = 0; scanf(\"%u\", &num); for (int i = 0; i < num; i++) { scanf(\"%u\", &a[i]); } scanf(\"%u\", &cut); for (int i = 0; i < num; i++) { if (a[i] <= cut) { a[i] = 0; printf(\"%u \", a[i]); } else { printf(\"%u \", a[i]); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. unsigned num을 0으로 초기화하여 선언하세요.  \n3. unsigned형 배열 a의 크기를 100으로 설정하고 0으로 초기화하세요.  \n4. unsigned cut 변수를 0으로 선언하세요.  \n5. num에 대한 입력을 받기 위해 scanf 함수를 호출하세요.  \n6. [rep_start(1)] i를 선언하여 0부터 num-1까지 반복하는 for 루프를 작성하세요.  \n7. 배열 a의 i번째 요소에 대한 입력을 받기 위해 scanf 함수를 호출하세요.  \n8. [rep_end(1)]  \n9. cut에 대한 입력을 받기 위해 scanf 함수를 호출하세요.  \n10. [rep_start(1)] i를 선언하여 0부터 num-1까지 반복하는 for 루프를 작성하세요.  \n11. [cond_start(2)] a의 i번째 요소가 cut 이하인지 확인하는 조건문을 작성하세요.  \n12. a[i]가 cut 이하라면, a[i]를 0으로 설정하세요.  \n13. a[i]를 0으로 설정한 후, 0을 출력하세요.  \n14. [cond_end(2)]  \n15. [cond_start(2)] a의 i번째 요소가 cut 초과인지 확인하는 조건문을 작성하세요.  \n16. a[i]가 cut 초과라면, a[i]를 출력하세요.  \n17. [cond_end(2)]  \n18. [rep_end(1)]  \n19. return 0;으로 프로그램을 종료하세요.  \n20. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void){ int i; scanf(\"%X\", &i); int idx1 = (i - 0x1000)/20; int idx2 = ((i - 0x1000)/4)%5; printf(\"%d %d\", idx1, idx2); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 선언하세요.\n3. i에 16진수 입력을 받으세요.\n4. int형 변수 idx1을 선언하여 i에서 0x1000을 뺀 후 20으로 나눈 값을 저장하세요.\n5. int형 변수 idx2를 선언하여 i에서 0x1000을 뺀 후 4로 나눈 값을 5로 나눈 나머지를 저장하세요.\n6. idx1과 idx2를 출력하세요.\n7. return 0;으로 프로그램을 종료하세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#if 1 #include <stdio.h> int main() { unsigned int arr[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &arr[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i + j == 8 || i == j || i == 4 || j == 4) { printf(\" \"); } else { printf(\"%u \", arr[i][j]); } } printf(\"\\n\"); } return 0; } #endif"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] unsigned int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 9x9 크기의 배열 arr을 선언하세요.  \n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n5. scanf를 이용하여 arr[i][j]에 값을 입력받으세요.  \n6. [rep_end(2)]  \n7. [rep_end(1)]  \n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.  \n10. [cond_start(2)] i + j가 8이거나 i가 j이거나 i가 4이거나 j가 4인지 확인하는 조건문을 작성하세요.  \n11. 조건이 참이라면 공백을 출력하세요.  \n12. [cond_end(2)]  \n13. [cond_start(2)] 조건이 거짓이라면 arr[i][j] 값을 출력하세요.  \n14. arr[i][j] 값을 출력한 후 공백을 추가로 출력하세요.  \n15. [cond_end(2)]  \n16. printf를 사용하여 줄 바꿈을 출력하세요.  \n17. [rep_end(2)]  \n18. return 0;으로 프로그램을 종료하세요.  \n19. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int N = 0; scanf(\"%d\", &N); int array[9] = { 0 }; int cnt = 0; while (N > 0) { if (N % 2 == 0) { array[cnt] = 0; cnt++; N = N / 2; } else { array[cnt] = 1; cnt++; N = N / 2; } } for (int i = 0; i < 8; i++) { printf(\"%d\", array[i]); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 0으로 초기화하세요.\n3. N에 대해 사용자 입력을 받으세요.\n4. int형 배열 array를 9개의 0으로 초기화하여 선언하세요.\n5. int형 변수 cnt를 0으로 초기화하세요.\n6. [rep_start(1)] N이 0보다 클 때까지 반복하는 while 루프를 작성하세요.\n7. [cond_start(2)] N을 2로 나눈 나머지를 확인하여 짝수인지 판단하는 조건문을 작성하세요.\n8. N이 짝수이면 array[cnt]에 0을 저장하세요.\n9. cnt를 1 증가시키세요.\n10. N을 2로 나누어 N을 업데이트하세요.\n11. [cond_end(2)]\n12. [cond_start(2)] N이 홀수인지 확인하는 조건문을 작성하세요.\n13. N이 홀수이면 array[cnt]에 1을 저장하세요.\n14. cnt를 1 증가시키세요.\n15. N을 2로 나누어 N을 업데이트하세요.\n16. [cond_end(2)]\n17. [rep_end(1)]\n18. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n19. array[i]의 값을 출력하세요.\n20. [rep_end(1)]\n21. return 0;으로 프로그램을 종료하세요.\n22. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> #define UINT unsigned int int main() { UINT n; UINT arr[100]; UINT max; scanf(\"%u\", &n); for (UINT i = 0; i < n; i++) scanf(\"%u\", &arr[i]); scanf(\"%u\", &max); for (UINT i = 0; i < n; i++) { if (arr[i] > max) printf(\"%u \", arr[i]); else printf(\"0 \"); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. UINT 형 변수 n을 선언하세요.\n3. UINT 형 배열 arr[100]를 선언하세요.\n4. UINT 형 변수 max를 선언하세요.\n5. n의 값을 입력받기 위해 scanf를 사용하세요.\n6. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n7. 각 반복에서 arr[i]의 값을 입력받기 위해 scanf를 사용하세요.\n8. [rep_end(1)]\n9. max의 값을 입력받기 위해 scanf를 사용하세요.\n10. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] arr[i]가 max보다 큰지 확인하는 조건문을 작성하세요.\n12. arr[i]가 max보다 크면 arr[i]를 출력하세요.\n13. [cond_end(2)]\n14. 그렇지 않으면 0을 출력하세요.\n15. [rep_end(1)]\n16. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int A = 0; unsigned int bit[100] = { 0 }; scanf(\"%u\", &A); int cnt = 1; while (cnt <= 8) { bit[cnt] = A % 2; A = A / 2; cnt++; } for (int i = 1; i <= 8; i++) { printf(\"%u\", bit[i]); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 A를 0으로 초기화하세요.\n3. unsigned int형 배열 bit[100]을 0으로 초기화하세요.\n4. A의 값으로 사용자로부터 unsigned int 입력을 받으세요.\n5. int형 변수 cnt를 1로 초기화하세요.\n6. [rep_start(1)] cnt가 8 이하인 동안 반복하는 while 루프를 작성하세요.\n7. 현재 A를 2로 나눈 나머지를 bit[cnt]에 저장하세요.\n8. A를 2로 나눈 몫으로 업데이트하세요.\n9. cnt를 1 증가시키세요.\n10. [rep_end(1)]\n11. [rep_start(1)] i를 선언해 1부터 8까지 반복하는 for 루프를 작성하세요.\n12. bit[i]의 값을 출력하세요.\n13. [rep_end(1)]\n14. 프로그램을 종료하세요.\n15. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int n = 0; unsigned int arr[100] = { 0 }; unsigned int t = 0; scanf(\"%u\", &n); for(int i = 0; i < n; i++) { scanf(\"%u\", &arr[i]); } scanf(\"%u\", &t); for (int i = 0; i < n; i++) { if (arr[i] <= t) { arr[i] = 0; } printf(\"%u \", arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 n을 0으로 초기화하세요.\n3. unsigned int형 배열 arr[100]을 0으로 초기화하면서 선언하세요.\n4. unsigned int형 변수 t를 0으로 초기화하세요.\n5. n의 값을 입력받으세요.\n6. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n7. 배열 arr[i]에 값을 입력받으세요.\n8. [rep_end(1)]\n9. t의 값을 입력받으세요.\n10. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] arr[i]가 t보다 작거나 같은지 확인하는 조건문을 작성하세요.\n12. arr[i]가 t보다 작거나 같다면 arr[i]를 0으로 설정하세요.\n13. [cond_end(2)]\n14. arr[i]를 출력하세요.\n15. [rep_end(1)]\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int N; scanf(\"%u\", &N); if (N >> 0 & 0x01) N -= 1; if (N >> 3 & 0x01) N -= 8; if (N >> 4 & 0x01) N -= 16; if (N >> 7 & 0x01) N -= 128; printf(\"%d\", N); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. [cond_start(1)] N의 0번째 비트가 1인지 확인하는 조건문을 작성하세요.\n5. N의 0번째 비트가 1이라면 N에서 1을 감소시키세요.\n6. [cond_end(1)]\n7. [cond_start(1)] N의 3번째 비트가 1인지 확인하는 조건문을 작성하세요.\n8. N의 3번째 비트가 1이라면 N에서 8을 감소시키세요.\n9. [cond_end(1)]\n10. [cond_start(1)] N의 4번째 비트가 1인지 확인하는 조건문을 작성하세요.\n11. N의 4번째 비트가 1이라면 N에서 16을 감소시키세요.\n12. [cond_end(1)]\n13. [cond_start(1)] N의 7번째 비트가 1인지 확인하는 조건문을 작성하세요.\n14. N의 7번째 비트가 1이라면 N에서 128을 감소시키세요.\n15. [cond_end(1)]\n16. N의 최종 값을 출력하세요.\n17. return 0;으로 프로그램을 종료하세요.\n18. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int cake[9][9]; for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { scanf(\"%u\", &cake[i][j]); } } for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { if (i == j) { printf(\" \"); } else if (i + j == 8) { printf(\" \"); } else if (j == 4) { printf(\" \"); } else if (i == 4) { printf(\" \"); } else { printf(\"%u \", cake[i][j]); } } printf(\"\\n\"); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 9x9 배열 cake를 선언하세요.\n3. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n4. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n5. scanf를 사용하여 배열 cake의 각 요소에 정수를 입력 받으세요.\n6. [rep_end(2)]\n7. [rep_end(1)]\n8. [rep_start(1)] i를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n9. [rep_start(2)] j를 선언해 0부터 8까지 반복하는 for 루프를 작성하세요.\n10. [cond_start(2)] 현재 i가 j와 같은지 확인하는 조건문을 작성하세요.\n11. i와 j가 같다면 공백을 출력하세요.\n12. [cond_end(2)]\n13. [cond_start(2)] i와 j를 더한 값이 8인지 확인하는 조건문을 작성하세요.\n14. i와 j의 합이 8이라면 공백을 출력하세요.\n15. [cond_end(2)]\n16. [cond_start(2)] j가 4인지 확인하는 조건문을 작성하세요.\n17. j가 4라면 공백을 출력하세요.\n18. [cond_end(2)]\n19. [cond_start(2)] i가 4인지 확인하는 조건문을 작성하세요.\n20. i가 4라면 공백을 출력하세요.\n21. [cond_end(2)]\n22. [cond_start(2)] 위의 조건들이 모두 아니면 배열의 요소를 출력하세요.\n23. 배열 cake의 i, j 위치의 값을 출력하세요.\n24. [cond_end(2)]\n25. printf로 줄 바꿈을 출력하세요.\n26. [rep_end(2)]\n27. [rep_end(1)]\n28. return 0;으로 프로그램을 종료하세요.\n29. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned char n; int arr[8] = { 0, }; scanf(\"%d\", &n); if (n >= 128) { n = n - 128; arr[7] = 1; } if (n >= 64) { n = n - 64; arr[6] = 1; } if (n >= 32) { n = n - 32; arr[5] = 1; } if (n >= 16) { n = n - 16; arr[4] = 1; } if (n >= 8) { n = n - 8; arr[3] = 1; } if (n >= 4) { n = n - 4; arr[2] = 1; } if (n >= 2) { n = n - 2; arr[1] = 1; } if(n==1){ n = n - 1; arr[0] = 1; } for (int i = 0; i < 8; i++) { printf(\"%d\", arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned char형 변수 n을 선언하세요.\n3. int형 배열 arr를 크기 8로 선언하고, 모든 요소를 0으로 초기화합니다.\n4. n에 값을 입력받으세요.\n5. [cond_start(1)] n이 128 이상인지 확인하는 조건문을 작성하세요.\n6. n이 128 이상이라면 128을 빼고 arr[7]를 1로 설정하세요.\n7. [cond_end(1)]\n8. [cond_start(1)] n이 64 이상인지 확인하는 조건문을 작성하세요.\n9. n이 64 이상이라면 64를 빼고 arr[6]를 1로 설정하세요.\n10. [cond_end(1)]\n11. [cond_start(1)] n이 32 이상인지 확인하는 조건문을 작성하세요.\n12. n이 32 이상이라면 32를 빼고 arr[5]를 1로 설정하세요.\n13. [cond_end(1)]\n14. [cond_start(1)] n이 16 이상인지 확인하는 조건문을 작성하세요.\n15. n이 16 이상이라면 16을 빼고 arr[4]를 1로 설정하세요.\n16. [cond_end(1)]\n17. [cond_start(1)] n이 8 이상인지 확인하는 조건문을 작성하세요.\n18. n이 8 이상이라면 8을 빼고 arr[3]를 1로 설정하세요.\n19. [cond_end(1)]\n20. [cond_start(1)] n이 4 이상인지 확인하는 조건문을 작성하세요.\n21. n이 4 이상이라면 4를 빼고 arr[2]를 1로 설정하세요.\n22. [cond_end(1)]\n23. [cond_start(1)] n이 2 이상인지 확인하는 조건문을 작성하세요.\n24. n이 2 이상이라면 2를 빼고 arr[1]을 1로 설정하세요.\n25. [cond_end(1)]\n26. [cond_start(1)] n이 1인지 확인하는 조건문을 작성하세요.\n27. n이 1이라면 1을 빼고 arr[0]을 1로 설정하세요.\n28. [cond_end(1)]\n29. [rep_start(1)] i를 선언하여 0부터 7까지 반복하는 for 루프를 작성하세요.\n30. arr[i]의 값을 출력하세요.\n31. [rep_end(1)]\n32. return 0;으로 프로그램을 종료하세요.\n33. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include<stdio.h> int main() { int N; scanf(\"%d\", &N); int B[8]; for (int i = 0; i<8; i++) { B[i] = N % 2; N = N / 2; } for (int i = 0; i < 8; i++) { printf(\"%d\", B[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. 정수형 배열 B를 8개의 요소로 선언하세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. B[i]에 N을 2로 나눈 나머지를 저장하세요.\n7. N을 2로 나눈 값으로 업데이트하세요.\n8. [rep_end(1)]\n9. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n10. B[i]의 값을 출력하세요.\n11. [rep_end(1)]\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int N; scanf(\"%d\", &N); int arr[8] = { 0 }; int cnt = 0, up = 1; for (int i = 7; i >= 0; i--) { arr[i] = N % 2; N /= 2; if (i == 0 || i == 3 || i == 4 || i == 7)arr[i] = 0; } for (int i = 7; i >= 0; i--) { cnt = cnt + (arr[i] * up); up *= 2; } printf(\"%d\", cnt); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. int형 배열 arr을 8개의 요소로 초기화하여 선언하세요.\n5. int형 변수 cnt와 up을 각각 0과 1로 초기화하세요.\n6. [rep_start(1)] i를 7부터 0까지 감소시키면서 반복하는 for 루프를 작성하세요.\n7. arr[i]에 N을 2로 나눈 나머지를 저장하세요.\n8. N을 2로 나눈 값으로 업데이트하세요.\n9. [cond_start(2)] i가 0, 3, 4, 7 중 하나인지 확인하는 조건문을 작성하세요.\n10. 해당하는 경우 arr[i]의 값을 0으로 설정하세요.\n11. [cond_end(2)]\n12. [rep_end(1)]\n13. [rep_start(1)] i를 7부터 0까지 감소시키면서 반복하는 for 루프를 작성하세요.\n14. cnt에 arr[i]와 up의 곱을 더하세요.\n15. up을 2배로 증가시키세요.\n16. [rep_end(1)]\n17. cnt를 출력하세요.\n18. return 0;으로 프로그램을 종료하세요.\n19. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int n, iter = 8; int a[iter], k = 1, sum = 0; scanf(\"%d\", &n); for (int i = 0; i < 8; i++) { if (i == 0 || i == 3 || i == 4 || i == 7) { a[i] = 0; } else { a[i] = (n >> i) & 0x01; } sum += k * a[i]; k *= 2; } printf(\"%d\\n\", sum); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n과 iter를 선언하고 iter를 8로 초기화하세요.\n3. 정수형 배열 a의 크기를 iter로 설정하고, 변수 k를 1로 초기화하세요.\n4. n에 대한 입력을 받으세요.\n5. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. [cond_start(2)] i가 0, 3, 4 또는 7인지 확인하는 조건문을 작성하세요.\n7. i가 위의 값 중 하나일 경우, a[i]에 0을 저장하세요.\n8. [cond_end(2)]\n9. [cond_start(2)] i가 위의 경우가 아닐 때 실행하는 조건문을 작성하세요.\n10. n을 i 비트 오른쪽으로 이동시켜 이진수의 해당 비트를 추출하고 a[i]에 저장하세요.\n11. [cond_end(2)]\n12. sum에 k 곱하기 a[i]를 더하세요.\n13. k를 2배로 증가시키세요.\n14. [rep_end(1)]\n15. sum의 값을 출력하세요.\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { int N; unsigned int arr[100]; unsigned int T; scanf(\"%d\", &N); for (int i = 0; i < N; i++) { scanf(\"%u\", &arr[i]); } scanf(\"%u\", &T); for (int i = 0; i < N; i++) { if (arr[i] <= T) { printf(\"0 \"); } else { printf(\"%u \", arr[i]); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 N을 선언하세요.  \n3. 100개의 unsigned int형 요소를 포함하는 배열 arr을 선언하세요.  \n4. unsigned int형 변수 T를 선언하세요.  \n5. N을 입력받기 위해 scanf 함수를 호출하세요.  \n6. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.  \n7. 배열 arr의 i번째 요소에 값을 입력받기 위해 scanf 함수를 호출하세요.  \n8. [rep_end(1)]  \n9. T를 입력받기 위해 scanf 함수를 호출하세요.  \n10. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.  \n11. [cond_start(2)] arr[i]가 T보다 작거나 같은지 확인하는 조건문을 작성하세요.  \n12. arr[i]가 T보다 작거나 같다면 0을 출력하세요.  \n13. [cond_end(2)]  \n14. [cond_start(2)] arr[i]가 T보다 큰 경우를 처리하는 조건문을 작성하세요.  \n15. arr[i]를 출력하세요.  \n16. [cond_end(2)]  \n17. [rep_end(1)]  \n18. return 0;으로 프로그램을 종료하세요.  \n19. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main() { int n; scanf(\"%d\", &n); int temp = n & 0x66; printf(\"%d\", temp); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 n을 선언하세요.  \n3. n에 대한 입력을 받으세요.  \n4. n의 비트를 0x66와 AND 연산하여 결과를 temp에 저장하세요.  \n5. temp의 값을 출력하세요.  \n6. return 0;으로 프로그램을 종료하세요.  \n7. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> main() { int n; unsigned int a[100]; unsigned int t; scanf(\"%d\", &n); for (int i = 0; i < n; i++) { scanf(\"%u\", &a[i]); } scanf(\"%u\", &t); for (int i = 0; i < n; i++) { if (a[i] <= t) printf(\"0 \"); else printf(\"%u \", a[i]); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] 반환형이 없는 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 n을 선언하세요.\n3. unsigned int형 배열 a를 크기 100으로 선언하세요.\n4. unsigned int형 변수 t를 선언하세요.\n5. n의 값을 입력받으세요.\n6. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n7. 배열 a의 i번째 요소에 대한 값을 입력받으세요.\n8. [rep_end(1)]\n9. t의 값을 입력받으세요.\n10. [rep_start(1)] i를 선언해 0부터 n-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] a의 i번째 요소가 t보다 작거나 같은지 확인하는 조건문을 작성하세요.\n12. a[i]가 t보다 작거나 같으면 0을 출력하세요.\n13. [cond_end(2)]\n14. 그렇지 않다면 a[i]를 출력하세요.\n15. [rep_end(1)]\n16. 프로그램이 종료됩니다. (main 함수의 끝)\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int n; scanf(\"%u\", &n); for (int i = 0; i < 8; i++) { printf(\"%u\", (n >> i) & 1); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 n을 선언하세요.\n3. n에 대한 사용자 입력을 받으세요.\n4. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. i번째 비트를 출력하기 위해 n을 i만큼 오른쪽으로 이동시키고, 최하위 비트만 추출하여 출력합니다.\n6. [rep_end(1)]\n7. 프로그램의 종료를 나타내는 return 0; 문으로 끝내세요.\n8. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int N; scanf(\"%d\", &N); int list[8]; for (int i = 0; i < 8; i++) { list[i] = N % 2; N = N / 2; } int idx = 1; int sum = 0; for (int i = 0; i < 8; i++) { if (i == 0 || i == 3 || i == 4 || i == 7) { idx = 2 * idx; } else { sum = sum + list[i] * idx; idx = 2 * idx; } } printf(\"%d\", sum); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. 정수형 배열 list를 선언하여 크기를 8로 설정하세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. list[i]에 N을 2로 나눈 나머지를 저장하세요 (N의 이진수의 각 자리를 저장하기 위해).\n7. N을 2로 나눈 결과로 업데이트하세요.\n8. [rep_end(1)]\n9. int형 변수 idx를 1로 초기화하세요 (이진수 자릿수의 가중치를 계산하기 위해 사용).\n10. int형 변수 sum을 0으로 초기화하세요 (결과를 저장하기 위해 사용).\n11. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n12. [cond_start(2)] i가 0, 3, 4, 7 중 하나인지 확인하는 조건문을 작성하세요.\n13. 해당 조건이 참이라면 idx를 두 배로 증가시키세요.\n14. [cond_end(2)]\n15. [cond_start(2)] 그렇지 않다면 sum에 list[i]와 idx를 곱한 값을 더하세요.\n16. idx를 두 배로 증가시키세요. \n17. [cond_end(2)]\n18. [rep_end(1)]\n19. sum을 출력하세요.\n20. return 0;으로 프로그램을 종료하세요.\n21. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int N; scanf(\"%d\", &N); int bit[8] = { 0 }; int i = 0; while (N > 0) { bit[i] = N % 2; i++; N = N / 2; } for (i = 0; i < 8; i++) { printf(\"%d\", bit[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)  \n2. 정수형 변수 N을 선언하세요.  \n3. N에 대한 입력을 받으세요.  \n4. int형 배열 bit을 선언하고 8개의 요소를 0으로 초기화하세요.  \n5. int형 변수 i를 0으로 초기화하세요.  \n6. [rep_start(1)] N이 0보다 큰 동안 반복하는 while 루프를 작성하세요.  \n7. bit[i]에 N을 2로 나눈 나머지를 저장하세요.  \n8. i를 1 증가시키세요.  \n9. N을 2로 나눈 값을 N에 저장하세요.  \n10. [rep_end(1)]  \n11. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.  \n12. bit[i]의 값을 출력하세요.  \n13. [rep_end(1)]  \n14. return 0;으로 프로그램을 종료하세요.  \n15. [func_def_end(1)]  "
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int i = 0; scanf(\"%d\", &i); for (int j = 0; j < 8; j++) { printf(\"%d\", (i >> j) & 0b1); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 0으로 초기화하세요.\n3. i에 대한 입력을 받으세요.\n4. [rep_start(1)] j를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. i의 j번째 비트를 오른쪽으로 이동하고 1과 AND 연산하여 해당 비트를 출력하세요.\n6. [rep_end(1)]\n7. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main(void) { int a1, a2; scanf(\"%d %d\", &a1, &a2); int arr[6][5]; for (int i = 0; i < 6; i++) { for (int j = 0; j < 5; j++) { arr[i][j] = 0x1000 + 0x4 * j + 0x4 * 0x5 * i; } } printf(\"%X\", arr[a1][a2]); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 a1과 a2를 선언하세요.\n3. a1과 a2에 입력을 받으세요.\n4. 6x5 크기의 2차원 배열 arr을 선언하세요.\n5. [rep_start(1)] i를 선언해 0부터 5까지 반복하는 for 루프를 작성하세요.\n6. [rep_start(2)] j를 선언해 0부터 4까지 반복하는 for 루프를 작성하세요.\n7. arr[i][j]에 0x1000 + 0x4 * j + 0x4 * 0x5 * i 값을 할당하세요.\n8. [rep_end(2)]\n9. [rep_end(1)]\n10. arr[a1][a2]의 값을 16진수 형식으로 출력하세요.\n11. return 0;으로 프로그램을 종료하세요.\n12. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include<stdio.h> int main() { unsigned char A[8] = { 0 }; unsigned int N = 0; unsigned int N2 = 0; scanf(\"%u\", &N); for (int i = 0; i < 8; i++) { A[i] = N & 0x01; N >>= 1; } N2 = A[1] * 2 + A[2] * 4 + A[5] * 32 + A[6] * 64; printf(\"%u\", N2); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned char 형 배열 A를 8개의 요소로 초기화하여 선언하세요.\n3. unsigned int 형 변수 N과 N2를 0으로 초기화하여 선언하세요.\n4. N에 대해 사용자로부터 양의 정수를 입력받으세요.\n5. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. A[i]에 N의 최하위 비트를 저장하세요. (N & 0x01)\n7. N을 오른쪽으로 1 비트 쉬프트하세요.\n8. [rep_end(1)]\n9. N2에 A 배열의 특정 인덱스를 사용하여 비트 값을 조합하여 저장하세요. (A[1] * 2 + A[2] * 4 + A[5] * 32 + A[6] * 64)\n10. N2의 값을 출력하세요.\n11. return 0;으로 프로그램을 종료하세요.\n12. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { unsigned int N; scanf(\"%u\", &N); unsigned int arr[100]; for (int i = 0; i < N; i++) { scanf(\"%u\", &arr[i]); } unsigned int T; scanf(\"%u\", &T); for (int i = 0; i < N; i++) { if (arr[i] <= T) printf(\"0 \"); else printf(\"%u \", arr[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 N을 선언하세요.\n3. N에 대한 입력을 받으세요.\n4. unsigned int형 배열 arr을 100 크기로 선언하세요.\n5. [rep_start(1)] i를 선언하여 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n6. arr 배열의 i번째 인덱스에 대한 입력을 받으세요.\n7. [rep_end(1)]\n8. unsigned int형 변수 T를 선언하세요.\n9. T에 대한 입력을 받으세요.\n10. [rep_start(1)] i를 선언하여 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] arr[i]가 T 이하인지 확인하는 조건문을 작성하세요.\n12. arr[i]가 T 이하라면 0을 출력하세요.\n13. [cond_end(2)]\n14. arr[i]가 T를 초과하면 arr[i]를 출력하세요.\n15. [rep_end(1)]\n16. return 0;으로 프로그램을 종료하세요.\n17. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { unsigned int n; int k = 0; scanf(\"%u\", &n); for (int i = 0; i < 8; i++) { k = n % 2; printf(\"%d\", k); n = n / 2; } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 n을 선언하세요.\n3. int형 변수 k를 0으로 초기화하세요.\n4. n에 대한 입력을 받으세요.\n5. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. n을 2로 나눈 나머지를 k에 저장하세요.\n7. k의 값을 출력하세요.\n8. n을 2로 나누세요.\n9. [rep_end(1)]\n10. return 0;으로 프로그램을 종료하세요.\n11. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int te; unsigned char tw[8] = {0}; scanf(\"%u\", &te); for (int i = 0; i < 8; i++) { tw[i] = te % 2; te = te / 2; } for (int i = 0; i < 8; i++) { printf(\"%u\", tw[i]); } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 te를 선언하세요.\n3. unsigned char형 배열 tw를 선언하고 8개의 요소를 0으로 초기화하세요.\n4. te에 대한 입력을 받기 위해 scanf 함수를 호출하세요.\n5. [rep_start(1)] i를 0으로 초기화하고 8보다 작은 동안 반복하는 for 루프를 작성하세요.\n6. tw 배열의 i 번째 요소에 te를 2로 나눈 나머지를 저장하세요.\n7. te를 2로 나눈 값으로 업데이트하세요.\n8. [rep_end(1)]\n9. [rep_start(1)] i를 0으로 초기화하고 8보다 작은 동안 반복하는 for 루프를 작성하세요.\n10. tw 배열의 i 번째 요소를 출력하세요.\n11. [rep_end(1)]\n12. return 0;으로 프로그램을 종료하세요.\n13. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "int main() { unsigned int N = 0; unsigned int A[100] = { 0 }; unsigned int T = 0; scanf(\"%u\",&N); for (int i = 0; i < N; i++) { scanf(\"%u\", &A[i]); } scanf(\"%u\", &T); for (int i = 0; i < N; i++) { if (A[i] <= T) printf(\"0 \"); else printf(\"%u \", A[i]); } }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. unsigned int형 변수 N을 0으로 초기화하세요.\n3. unsigned int형 배열 A를 크기 100으로 선언하고, 모든 요소를 0으로 초기화하세요.\n4. unsigned int형 변수 T를 0으로 초기화하세요.\n5. N의 값을 입력받으세요.\n6. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n7. 배열 A의 i번째 요소에 값을 입력받으세요.\n8. [rep_end(1)]\n9. T의 값을 입력받으세요.\n10. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] 배열 A의 i번째 요소가 T보다 작거나 같은지 확인하는 조건문을 작성하세요.\n12. A의 i번째 요소가 T보다 작거나 같다면 0을 출력하세요.\n13. [cond_end(2)]\n14. [cond_start(2)] 그렇지 않다면 A의 i번째 요소를 출력하세요.\n15. [cond_end(2)]\n16. [rep_end(1)]\n17. 프로그램이 종료되면 반환값이 없습니다.\n18. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main(void) { int N; scanf(\"%d\", &N); for (int i = 0; i < 8; i++) { if (N & 0x01) { printf(\"1\"); N = N >> 1; } else { printf(\"0\"); N = N >> 1; } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. N에 입력을 받으세요.\n4. [rep_start(1)] i를 0부터 7까지 반복하는 for 루프를 작성하세요.\n5. [cond_start(2)] N의 최하위 비트가 1인지 확인하는 조건문을 작성하세요.\n6. 최하위 비트가 1이라면 \"1\"을 출력하세요.\n7. N을 오른쪽으로 1 비트 시프트하세요.\n8. [cond_end(2)]\n9. [cond_start(2)] 최하위 비트가 0인 경우를 처리하는 조건문을 작성하세요.\n10. 최하위 비트가 0이라면 \"0\"을 출력하세요.\n11. N을 오른쪽으로 1 비트 시프트하세요.\n12. [cond_end(2)]\n13. [rep_end(1)]\n14. return 0;으로 프로그램을 종료하세요.\n15. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include<stdio.h> int main(){ int N; scanf(\"%d\",&N); int B[8]; for(int i=0;i<8;i++){ B[i] = N%2; N = N/2; if(i==0||i==3||i==4||i==7){ B[i] = 0; } } int A=0; for(int i=0;i<8;i++){ for(int j=0;j<i;j++){ B[i] = B[i]*2; } A = A+B[i]; } printf(\"%d\",A); return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. N에 입력을 받으세요.\n4. 정수형 배열 B를 크기 8로 선언하세요.\n5. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n6. B[i]에 N을 2로 나눈 나머지를 할당하여 이진수의 가장 뒤쪽 비트를 저장하세요.\n7. N을 2로 나누어 이진수의 다음 비트로 이동하세요.\n8. [cond_start(2)] i가 0, 3, 4, 7 중 하나인지 확인하는 조건문을 작성하세요.\n9. 조건이 참이라면 B[i]를 0으로 설정하세요.\n10. [cond_end(2)]\n11. [rep_end(1)]\n12. 정수형 변수 A를 0으로 초기화하세요.\n13. [rep_start(1)] i를 선언해 0부터 7까지 반복하는 for 루프를 작성하세요.\n14. [rep_start(2)] j를 선언해 0부터 i-1까지 반복하는 for 루프를 작성하세요.\n15. B[i]에 B[i]를 2배로 곱하세요.\n16. [rep_end(2)]\n17. A에 B[i]를 더하세요.\n18. [rep_end(1)]\n19. A의 값을 출력하세요.\n20. return 0;으로 프로그램을 종료하세요.\n21. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#include <stdio.h> int main() { int i = 0; scanf(\"%d\", &i); printf(\"%X\", 0x1000 + (i * 4)); }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 i를 0으로 초기화하세요.\n3. i에 입력을 받으세요.\n4. 0x1000과 i에 4를 곱한 값을 더한 후, 그 결과를 16진수 형식으로 출력하세요.\n5. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "#define _CRT_SECURE_NO_WARNINGS #include <stdio.h> int main() { int N; unsigned int A[100]; unsigned int T; scanf(\"%d\", &N); for (int i = 0; i < N; i++) { scanf(\"%u\", &A[i]); } scanf(\"%u\", &T); for (int i = 0; i < N; i++) { if (A[i] <= T) { printf(\"0 \"); } else { printf(\"%u \", A[i]); } } return 0; }"
+      },
+      {
+        "role": "assistant",
+        "content": "1. [func_def_start(1)] int 반환형 main 함수를 정의하세요. (매개변수 없음)\n2. 정수형 변수 N을 선언하세요.\n3. unsigned int형 배열 A의 크기를 100으로 설정하여 선언하세요.\n4. unsigned int형 변수 T를 선언하세요.\n5. N의 값을 입력받으세요.\n6. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n7. 배열 A의 i번째 요소에 대해 값을 입력받으세요.\n8. [rep_end(1)]\n9. T의 값을 입력받으세요.\n10. [rep_start(1)] i를 선언해 0부터 N-1까지 반복하는 for 루프를 작성하세요.\n11. [cond_start(2)] 배열 A의 i번째 요소가 T 이하인지 확인하는 조건문을 작성하세요.\n12. A[i]가 T 이하라면 0을 출력하세요.\n13. [cond_end(2)]\n14. [cond_start(2)] A[i]가 T를 초과하는 경우를 처리하는 조건문을 작성하세요.\n15. A[i]의 값을 출력하세요.\n16. [cond_end(2)]\n17. [rep_end(1)]\n18. return 0;으로 프로그램을 종료하세요.\n19. [func_def_end(1)]"
+      }
+    ],
+    "source": "custom-dataset",
+    "score": 4.8
+  }
+]
