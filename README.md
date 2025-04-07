@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 layout: page
 title: About
@@ -33,14 +32,3 @@ permalink: /about/
 - 이름: 최연호
 - 나이: 27 (1999)
 - 전화번호: 010-4449-3126
-=======
-## Theme Monos
-> Simple and lightweight theme for Jekyll
-
-### Features
-- Responsive.
-- Most optimized theme for tech blog.
-- Lightweight with minimum stylesheet.
-- Easy to customize.
-- Offers category menu.
->>>>>>> 7897359 (Create README.md)
