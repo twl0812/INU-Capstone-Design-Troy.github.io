@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 **Page link**
-[link](https://inu-capstone-design-troy.github.io/2025/03/09/%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8%EB%AF%B8%ED%8C%85.html)
-push
+[바로 가기](https://inu-capstone-design-troy.github.io/2025/03/09/%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8%EB%AF%B8%ED%8C%85.html)
 
 **Member**
 
