@@ -67,25 +67,35 @@ date: 2025-04-09 10:00:00 +0900
 ### Step1 줄 단위 분리 테스트
 
 - 날짜: 2025-04-10
+
 - 아래 huggingface에 업로드함
-- https://huggingface.co/comjke33/gemma3-4b-1step-fine-tuned
+
+  https://huggingface.co/comjke33/gemma3-4b-1step-fine-tuned
 
 ---
 
 ### Step2 분리 모델 재학습
 
 - 날짜: 2025-04-11
+
 - lora의 Adapter 모델을 huggingface 상에 저장하지 않았다는 사실을 확인.
+
 - Adapter 가중치 행렬을 저장할 수 있도록 다시 huggingface에 업로드하였다.
+
 - 아래의 huggingface에 업로드함
-  - https://huggingface.co/comjke33/gemma-3-4b-1step-lora
+
+  https://huggingface.co/comjke33/gemma-3-4b-1step-lora
 
 ---
 
 ### Step1 분리 모델 재학습
 
 - 날짜: 2025-04-12
+
 - 데이터셋의 설명문이 너무 친절하지 못하고, 학생이 전체 코드의 흐름을 파악하면서 코드를 작성할 수 없도록 되어있음
+
 - 따라서 코드 데이터셋에서 **설명문을 더 자세하게 수정**함.
+
 - 수정된 데이터셋으로 재학습시키고 lora Adapter 모델을 아래의 huggingface에 업로드함
-  - https://huggingface.co/comjke33/gemma-3-4b-2step-lora
+
+  https://huggingface.co/comjke33/gemma-3-4b-2step-lora
